@@ -1,0 +1,278 @@
+/*! _layout.scss | Cryptos | Kit 1 | CSS Ninja */
+
+/* ==========================================================================
+Layout styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. CSS Imports
+1. Index Hero
+=============================================================================
+***/
+
+/* ==========================================================================
+1. Index Hero
+========================================================================== */
+
+body {
+    overflow: hidden;
+}
+
+//Hero
+.hero {
+    position: relative;
+    .animation-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-height: 100vh;
+    }
+    //Background gradient
+    &.is-demo {
+        background-image: linear-gradient(to bottom, #5202d8 0%, #3c019e 100%);
+    }
+    .hero-square {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    //Navbar
+    .navbar {
+        position: relative;
+        min-height: 4rem;
+        transition: all .3s;
+        z-index: 99;
+        .container {
+            min-height: 4rem;
+        }
+        //Responsive menu icon
+        .navbar-burger {
+            width: 4rem;
+            height: 4rem;
+        }
+        //Brand
+        .navbar-brand {
+            min-height: 4rem;
+            img {
+                max-height: 36px !important;
+                height: 36px;
+            }
+            //brand text
+            .brand-name {
+                font-family: 'Fira', sans-serif;
+                font-size: 1.2rem;
+                font-weight: 600;
+                padding: 0 10px;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+            }
+            &:hover {
+                .navbar-item {
+                    background: transparent !important;
+                }
+            }
+        }
+        .navbar-item {
+            a.button {
+                font-family: 'Cabin', sans-serif; 
+                text-transform: uppercase;
+                font-size: .85rem !important;
+                font-weight: 500 !important;
+                &.hover {
+                    font-size: .85rem !important;
+                    font-weight: 500 !important;
+                }
+            }
+            &.is-nav-link {
+                font-family: 'Cabin', sans-serif;
+                text-transform: uppercase;
+                font-size: .85rem;
+            }
+        }
+        //Light navbar
+        &.is-light, &.is-dark {
+            .navbar-brand {
+                .brand-name {
+                    color: $white;
+                }
+                .navbar-link::after {
+                    border-color: $white;
+                }
+            }
+            .navbar-item {
+                a {
+                    color: $white;
+                }
+            }
+            .navbar-burger span {
+                background-color: $white !important;
+            }
+            //Responsive menu
+            .navbar-menu {
+                &.is-active {
+                    position: absolute;
+                    width: 100%;
+                }
+            }
+        }
+        &.is-dark {
+            background: #2d0275 !important;
+        }
+        //Fixed navbar modifier
+        &.is-fixed {
+            min-height: 4rem !important;
+            background: $white;
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
+            a {
+                color: $dark-text;
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+    //Cloned fixed navbar
+    #navbar-clone {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: translateY(-100%);
+        z-index: 100;
+        &.is-active {
+            transform: translateY(0); 
+        }
+    }
+    .hero-logo {
+        height: 80px;
+    }
+}
+
+//Main wrapper
+.content-wrapper {
+    padding: 20px 0;
+}
+
+.section {
+    outline: none !important;
+    position: relative;
+    &:active, &:focus {
+        outline: none !important;
+    }
+    &.is-dark {
+        background: #3c019e;
+    }
+}
+
+.cta-wrapper {
+    margin: 30px 0;
+}
+
+/* ==========================================================================
+1. Titles
+========================================================================== */
+
+.title, .subtitle {
+    &.is-light {
+        color: $white;
+        + p {
+            color: $white;
+        }
+    }
+    &.is-semibold {
+        font-weight: 600;
+    }
+    &.is-thin {
+        font-weight: 300 !important;
+    }
+    &.is-uppercase {
+        text-transform: uppercase;
+    }
+    &.is-tight {
+        margin-bottom: 10px !important;
+    }
+}
+
+.title {
+    font-family: 'Cabin', sans-serif;
+    &.main-title {
+        text-shadow: 4px 4px 2px rgba(150, 150, 150, 0.1);
+    }
+}
+
+.subtitle {
+    font-family: 'Cabin', sans-serif;
+    &.is-compact {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+.divider {
+    height: 2px;
+    width: 75px;
+    background: #7f00ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #7f00ff, #7f00ff) !important;  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #7f00ff, #e100ff) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 20px 0;
+    &.is-centered {
+        margin: 20px auto;
+    }
+}
+
+
+ul#countdown {
+    position: relative;
+    left: -10%;
+    //top: 50%;
+    //transform: translateY(-50%);
+    //width: 50%;
+    margin: 10px auto;
+    padding: 0 10px;
+    color: #fff;
+    //border: 1px solid #adafb2;
+    border-width: 1px 0;
+    overflow: hidden;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+
+    .number {
+        background-color: none !important;
+    }
+
+    li {
+        position: relative;
+        margin: 0 -3px 0 0;
+        padding: 0;
+        display: inline-block;
+        width: 25%;
+        font-size: 30px;
+        //font-size: 6vw;
+        text-align: center;
+        &:after {
+            content: ':';
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        &:last-child {
+            &:after {
+                content: '';
+            }
+        }
+
+        .label {
+            color: #adafb2;
+            font-size: 12px;
+            font-weight: 400;
+            //font-size: 1.5vw;
+            text-transform: uppercase;
+        }
+    }
+}
