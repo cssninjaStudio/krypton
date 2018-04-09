@@ -7,5 +7,97 @@
     }
     h4 {
         margin-top: 10px;
+        font-family: 'Cabin', sans-serif;
+    }
+}
+
+.side-feature {
+    max-height: 500px;
+}
+
+.side-feature-content {
+    img {
+        max-height: 50px;
+        width: 50px;
+        //display: block;
+    }
+    p {
+        &.is-light {
+            color: $white;
+        }
+        &.is-light-blue {
+            color: #d5ebff;
+        }
+    }
+    h3 span {
+        padding: 0 10px;
+    }
+}
+
+
+.flying-tabs-container {
+    max-width: 560px;
+    margin: 0 auto;
+    .flying-tabs {
+        li {
+            display: inline;
+            text-align: center;
+            &.is-active a {
+                color: $white !important;
+            }
+        }
+
+        a {
+            font-family: 'Cabin', sans-serif;
+            display: inline-block;
+            width: 24.4%;
+            padding: .75rem 0;
+            text-decoration: none;
+            color: #130133;
+            transition: all .3s;
+            &:hover {
+                color: darken(#130133, 5%);
+            }
+        }
+        
+        .tab-1.is-active {
+            margin: 0;
+        }
+        
+        .tab-2.is-active ~ hr {
+            margin-left: 25%;
+        }
+
+        .tab-3.is-active ~ hr {
+            margin-left: 50%;
+        }
+
+        .tab-4.is-active ~ hr {
+            margin-left: 75%;
+        }
+
+        /*.two:hover ~ hr {
+            margin-left: 25%;
+        }
+
+        .three:hover ~ hr {
+            margin-left: 50%;
+        }
+
+        .four:hover ~ hr {
+            margin-left: 75%;
+        }*/
+
+        hr {
+            height: 2px;
+            border-radius: 10px;
+            width: 25%;
+            margin: 0;
+            background: #7f00ff;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to top, #7f00ff, #3f00fc) !important;  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to top, #7f00ff, #3f00fc) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            border: none;
+            transition: .3s ease-in-out;
+        }
     }
 }

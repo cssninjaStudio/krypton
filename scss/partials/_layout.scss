@@ -42,6 +42,14 @@ body {
         top: 0;
         left: 0;
     }
+    #particles-js {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
     //Navbar
     .navbar {
         position: relative;
@@ -65,7 +73,7 @@ body {
             }
             //brand text
             .brand-name {
-                font-family: 'Fira', sans-serif;
+                font-family: 'Cabin', sans-serif;
                 font-size: 1.2rem;
                 font-weight: 600;
                 padding: 0 10px;
@@ -82,17 +90,17 @@ body {
             a.button {
                 font-family: 'Cabin', sans-serif; 
                 text-transform: uppercase;
-                font-size: .85rem !important;
-                font-weight: 500 !important;
                 &.hover {
-                    font-size: .85rem !important;
+                    font-size: .75rem !important;
                     font-weight: 500 !important;
                 }
             }
             &.is-nav-link {
-                font-family: 'Cabin', sans-serif;
-                text-transform: uppercase;
-                font-size: .85rem;
+                a {
+                    font-family: 'Cabin', sans-serif;
+                    text-transform: uppercase;
+                    font-size: .75rem;
+                }
             }
         }
         //Light navbar
@@ -121,9 +129,7 @@ body {
                 }
             }
         }
-        &.is-dark {
-            background: #2d0275 !important;
-        }
+
         //Fixed navbar modifier
         &.is-fixed {
             min-height: 4rem !important;
@@ -133,6 +139,15 @@ body {
                 color: $dark-text;
                 &:hover {
                     color: $primary;
+                }
+            }
+            &.is-dark {
+                background: #2d0275 !important;
+                a {
+                    color: $white;
+                    &:hover {
+                        color: #fcfcfc;
+                    }
                 }
             }
         }
@@ -154,9 +169,24 @@ body {
     }
 }
 
+.telegram {
+    height: 13px;
+    margin: 0 5px;
+    position: relative;
+    top: 2px;
+}
+
 //Main wrapper
 .content-wrapper {
     padding: 20px 0;
+    position: relative;
+    z-index: 2;
+    &.is-medium {
+        padding: 40px 0;
+    }
+    &.is-large {
+        padding: 60px 0;
+    }
 }
 
 .section {
@@ -165,13 +195,33 @@ body {
     &:active, &:focus {
         outline: none !important;
     }
+    &.is-relative {
+        position: relative;
+    }
     &.is-dark {
         background: #3c019e;
+    }
+    &.is-darker {
+        background: #320184;
+    }
+    &.is-darkest {
+        background: #270068;
+    }
+    .hero-square-2 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 0;
     }
 }
 
 .cta-wrapper {
     margin: 30px 0;
+    &.is-small {
+        margin: 20px 0;
+    }
 }
 
 /* ==========================================================================
@@ -215,14 +265,17 @@ body {
 }
 
 .divider {
-    height: 2px;
+    height: 3px;
     width: 75px;
     background: #7f00ff;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #7f00ff, #7f00ff) !important;  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #7f00ff, #e100ff) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to left, #7f00ff, #3f00fc) !important;  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #7f00ff, #3f00fc) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     margin: 20px 0;
     &.is-centered {
         margin: 20px auto;
+    }
+    &.is-long {
+        width: 150px;
     }
 }
 

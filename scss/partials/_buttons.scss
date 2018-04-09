@@ -17,10 +17,135 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 .button {
+    &.k-button {
+        min-width: 130px;
+        //font-weight: 400;
+        font-size: .75rem;
+        height: 40px;
+        &.is-fat {
+            padding: 26px 40px !important;
+        }
+    }
     //Hover raised buttons
     &.raised:hover {
         box-shadow: 0 14px 26px -12px rgba(0, 0, 0, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2) !important;
-        opacity: 0.8;
+        //opacity: 0.8;
+    }
+    //Uppercase button
+    &.upper-button {
+        text-transform: uppercase;
+    }
+    //Rounded buttons
+    &.rounded {
+        border-radius: 500px;
+    }
+    //Bold weight
+    &.is-bold {
+        font-weight: 500 !important;
+        text-transform: uppercase;
+        border-width: 2px;
+    }
+    &.slanted {
+        transform: skewX(-18deg);
+        border: none !important;
+        .text {
+            transform: skewX(18deg);
+            position: relative;
+            display: block;
+            z-index: 3;
+        }
+    }
+    &.k-primary {
+        color: $white;
+        &.has-gradient {
+            position: relative;
+            transition: all .6s ease-out !important;
+            //background-size:1px 200px; 
+            border: none !important;
+            background: #7f00ff;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to top, #7f00ff, #3f00fc) !important;  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to top, #7f00ff, #3f00fc) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            opacity: 1;
+            z-index: 0;
+            .text {
+                position: relative;
+                display: block;
+                z-index: 3;
+                opacity: 1 !important;
+            }
+            &:hover {
+                .front-gradient {
+                    opacity: 0;
+                }
+            }
+            .front-gradient {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                border-radius: 3px;
+                background: #7f00ff;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #7f00ff, #3f00fc) !important;  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #7f00ff, #3f00fc) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                opacity: 1;
+                transition: all .6s ease-out !important;
+                z-index: 1;
+            }
+        }
+    }
+    &.k-secondary {
+        color: $white;
+        &.has-gradient {
+            position: relative;
+            transition: all .6s ease-out !important;
+            //background-size:1px 200px; 
+            border: none !important;
+            background: #00D1B2 !important;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #087dd1, #07d176) !important;  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #087dd1, #07d176) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            opacity: 1;
+            z-index: 0;
+            .text {
+                position: relative;
+                display: block;
+                z-index: 3;
+                opacity: 1 !important;
+            }
+            &:hover {
+                .front-gradient {
+                    opacity: 0;
+                }
+            }
+            .front-gradient {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                border-radius: 3px;
+                background: #00C9FF !important;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #087dd1, #07d176) !important;  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #087dd1, #07d176) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                opacity: 1;
+                transition: all .6s ease-out !important;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+.button {
+    //Hover raised buttons
+    &.raised:hover {
+        box-shadow: 0 14px 26px -12px rgba(0, 0, 0, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2) !important;
+        //opacity: 0.8;
     }
     //Uppercase button
     &.upper-button {
@@ -33,9 +158,12 @@ TABLE OF CONTENTS
     &.slanted {
         transform: skewX(-18deg);
         border: none !important;
-        span small, small {
-            transform: skewX(18deg);
-        }
+        /*.front-gradient {
+        transform: skewX(-18deg); 
+    }
+        .text-upper {
+        transform: skewX(18deg);
+    }*/
     }
     //Helios CTA button
     &.feather-button {
@@ -67,7 +195,7 @@ TABLE OF CONTENTS
         //Bold weight
         &.is-bold {
             font-weight: 500 !important;
-            
+
             text-transform: uppercase;
             border-width: 2px;
         }
@@ -110,39 +238,6 @@ button[type=submit], .will-upload {
     }
     &:focus {
         border-color: $primary;
-    }
-    &.has-gradient {
-        position: relative;
-        transition: all .6s ease-out !important;
-        background-size:1px 200px; 
-        border: none !important;
-        background: #7f00ff;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to top, #7f00ff, #e100ff) !important;  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to top, #7f00ff, #e100ff) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        opacity: 1;
-        z-index: 0;
-        &:hover {
-            span {
-                opacity: 0;
-            }
-        }
-        span {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            border-radius: 3px;
-            background: #7f00ff;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #7f00ff, #e100ff) !important;  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #7f00ff, #e100ff) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-            opacity: 1;
-            transition: all .6s ease-out !important;
-            z-index: 1;
-        }
     }
 }
 
