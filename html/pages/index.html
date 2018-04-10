@@ -97,13 +97,6 @@ title: Home
 
     <div id="particles-js"></div>
 
-    <!--div class="animation-wrapper">
-<div class="particle particle-1"></div>
-<div class="particle particle-2"></div>
-<div class="particle particle-3"></div>
-<div class="particle particle-4"></div>
-</div-->
-
     <div class="hero-body">
         <div class="container">
             <div class="columns is-vcentered">
@@ -209,7 +202,7 @@ title: Home
     <img class="hero-square-2" src="assets/images/bg/hero-square4.svg">
 </section>
 
-<section class="section is-medium is-darker">
+<section id="big-gradient" class="section is-medium">
     <div class="container">
         <div class="divider is-centered"></div>
         <h2 class="title is-light is-semibold has-text-centered is-spaced">Truly Decentralized Exchange</h2>
@@ -265,7 +258,7 @@ title: Home
                         <p class="is-light">Viderer malorum sadipscing cum ei. Eu impetus perfecto sit, no sea labore detraxit. Primis mediocrem necessitatibus an vis. Eu impetus perfecto sit, no sea labore detraxit.</p>
                         <div class="cta-wrapper">
                             <a href="#" class="button k-button k-primary raised has-gradient is-fat is-bold">
-                                <span class="text">Read Whitepaper</span>
+                                <span class="text">Read Techpaper</span>
                                 <span class="front-gradient"></span>
                             </a>
                         </div>
@@ -282,21 +275,84 @@ title: Home
 <section class="section is-medium is-darkest">
     <div class="container">
         <div class="divider is-centered"></div>
-        <h2 class="title is-light is-semibold has-text-centered is-spaced">Secure, Fast and Powerful</h2>
+        <h2 class="title is-light is-semibold has-text-centered is-spaced">Super Fast and Powerful</h2>
         <h4 class="subtitle is-6 is-light has-text-centered is-compact">Viderer malorum sadipscing cum ei. Eu impetus perfecto sit, no sea labore detraxit. Primis mediocrem necessitatibus an vis. Ut sea pertinax perpetua, eruditi volumus quaestio ex mel, has ei tota homero.</h4>
 
         <div class="content-wrapper is-large">
 
-            <div class="flying-tabs-container">
-                <ul class="flying-tabs">
-                    <li class="tab-1 is-active"><a href="javascript:void(0);">ICO</a></li>
-                    <li class="tab-2"><a href="javascript:void(0);">TOKEN</a></li>
-                    <li class="tab-3"><a href="javascript:void(0);">PROFIT</a></li>
-                    <li class="tab-4"><a href="javascript:void(0);">BOUNTY</a></li>
-                    <hr/>
-                </ul>
-            </div>
+            <div class="flying-wrapper">
+                <div class="flying-tabs-container">
+                    <ul class="flying-tabs">
+                        <li class="tab-1 is-active" data-tab="tab-1"><a href="javascript:void(0);">ICO</a></li>
+                        <li class="tab-2" data-tab="tab-2"><a href="javascript:void(0);">TOKEN</a></li>
+                        <li class="tab-3" data-tab="tab-3"><a href="javascript:void(0);">PROFIT</a></li>
+                        <li class="tab-4" data-tab="tab-4"><a href="javascript:void(0);">BOUNTY</a></li>
+                        <hr/>
+                    </ul>
+                </div>
 
+                <div class="flying-tabs-content">
+                    <div id="tab-1" class="tab-content is-active">
+                        <div class="columns is-vcentered">
+                            <div class="column is-5 is-offset-1">
+                                <div class="text-content">
+                                    <h4 class="title is-6 is-light animated preFadeInUp fadeInUp">ICO ENDS IN</h4>
+                                    <p class="is-light animated preFadeInUp fadeInUp">This is some text that will say something important</p>
+                                </div>
+                            </div>
+                            <div class="column is-5">
+                                <div class="ico-card animated preFadeInUp fadeInUp">
+                                    <ul id="countdown" class="is-ico">
+                                        <li id="days">
+                                            <div class="timer-number">00</div>
+                                            <div class="label">Days</div>
+                                        </li>
+                                        <li id="hours">
+                                            <div class="timer-number">00</div>
+                                            <div class="label">Hours</div>
+                                        </li>
+                                        <li id="minutes">
+                                            <div class="timer-number">00</div>
+                                            <div class="label">Minutes</div>
+                                        </li>
+                                        <li id="seconds">
+                                            <div class="timer-number">00</div>
+                                            <div class="label">Seconds</div>
+                                        </li>
+                                    </ul>
+
+                                    <div class="progress-block">
+                                        <div class="progress-tags">
+                                            <div>Presale</div>
+                                            <div>Sale</div>
+                                            <div>Bonus</div>
+                                        </div>
+                                        <progress class="progress ico-progress" value="65" max="100">65%</progress>
+                                    </div>
+
+                                    <div class="button-block">
+                                        <a href="#" class="button k-button k-secondary raised has-gradient is-bold is-fullwidth rounded">
+                                            <span class="text">Join the ICO Now</span>
+                                            <span class="front-gradient"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="tab-2" class="tab-content has-text-centered">
+                        <div class="columns is-vcentered">
+                            <div class="column is-5 is-offset-1">
+                                This is some text that will say something important
+                            </div>
+                            <div class="column is-5">
+                                <img src="assets/images/illustrations/tokens.svg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>

@@ -62,7 +62,7 @@ $(document).ready(function() {
         var tab_id = $(this).attr('data-tab');
 
         $(this).siblings('li').removeClass('is-active');
-        $(this).find('#flying-tabs-content').children('.navtab-content').removeClass('is-active');
+        $(this).closest('.flying-wrapper').find('.flying-tabs-content').children('.tab-content').removeClass('is-active');
 
         $(this).addClass('is-active');
         $("#"+tab_id).addClass('is-active');

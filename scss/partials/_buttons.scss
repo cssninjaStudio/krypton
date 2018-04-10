@@ -95,6 +95,17 @@ TABLE OF CONTENTS
                 transition: all .6s ease-out !important;
                 z-index: 1;
             }
+            &.rounded {
+                .front-gradient {
+                    border-radius: 1000px;
+                }
+            }
+            &.raised {
+                &:hover {
+                    box-shadow: $primary-box-shadow !important;
+                    opacity: 0.95;
+                }
+            }
         }
     }
     &.k-secondary {
@@ -104,9 +115,9 @@ TABLE OF CONTENTS
             transition: all .6s ease-out !important;
             //background-size:1px 200px; 
             border: none !important;
-            background: #00D1B2 !important;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to left, #087dd1, #07d176) !important;  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to left, #087dd1, #07d176) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: #00ff99;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #00ff99, #33ccff) !important;  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #00ff99, #33ccff) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             opacity: 1;
             z-index: 0;
             .text {
@@ -130,12 +141,23 @@ TABLE OF CONTENTS
                 top: 0;
                 left: 0;
                 border-radius: 3px;
-                background: #00C9FF !important;  /* fallback for old browsers */
-                background: -webkit-linear-gradient(to right, #087dd1, #07d176) !important;  /* Chrome 10-25, Safari 5.1-6 */
-                background: linear-gradient(to right, #087dd1, #07d176) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                background: #00ff99;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to bottom, #00ff99, #33ccff) !important;  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to bottom, #00ff99, #33ccff) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                 opacity: 1;
                 transition: all .6s ease-out !important;
                 z-index: 1;
+            }
+            &.rounded {
+                .front-gradient {
+                    border-radius: 1000px;
+                }
+            }
+            &.raised {
+                &:hover {
+                    box-shadow: $secondary-box-shadow !important;
+                    opacity: 0.95;
+                }
             }
         }
     }
@@ -144,7 +166,7 @@ TABLE OF CONTENTS
 .button {
     //Hover raised buttons
     &.raised:hover {
-        box-shadow: 0 14px 26px -12px rgba(0, 0, 0, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2) !important;
+        box-shadow: 0 14px 26px -12px rgba(0, 0, 0, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
         //opacity: 0.8;
     }
     //Uppercase button
@@ -283,36 +305,6 @@ button[type=submit], .will-upload {
             background: linear-gradient(to right, #92FE9D, #00C9FF) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
         }
-    }
-}
-
-//accent button
-.button.accent-button {
-    outline: none;
-    border-color: $accent;
-    background-color: $accent;
-    color: $white;
-    transition: all 0.5s;
-    &:hover {
-        color: $white;
-    }
-    //raised state
-    &.raised:hover {
-        box-shadow: $accent-box-shadow;
-        opacity: 0.8;
-    }
-    //outlined button
-    &.btn-outlined {
-        border-color: $accent;
-        color: $accent;
-        background-color: transparent;
-        &:hover {
-            color: $white;
-            background-color: $accent;
-        }
-    }
-    &:focus {
-        border-color: $accent;
     }
 }
 

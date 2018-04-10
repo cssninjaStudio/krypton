@@ -217,6 +217,10 @@ body {
     }
 }
 
+#big-gradient {
+    background: url(../images/bg/gradient-left.png) no-repeat top left,url(../images/bg/gradient-right.png) no-repeat top right,#320184;
+}
+
 .cta-wrapper {
     margin: 30px 0;
     &.is-small {
@@ -280,52 +284,4 @@ body {
 }
 
 
-ul#countdown {
-    position: relative;
-    left: -10%;
-    //top: 50%;
-    //transform: translateY(-50%);
-    //width: 50%;
-    margin: 10px auto;
-    padding: 0 10px;
-    color: #fff;
-    //border: 1px solid #adafb2;
-    border-width: 1px 0;
-    overflow: hidden;
-    font-family: 'Arial Narrow', Arial, sans-serif;
-    font-weight: 500;
 
-    .number {
-        background-color: none !important;
-    }
-
-    li {
-        position: relative;
-        margin: 0 -3px 0 0;
-        padding: 0;
-        display: inline-block;
-        width: 25%;
-        font-size: 30px;
-        //font-size: 6vw;
-        text-align: center;
-        &:after {
-            content: ':';
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-        &:last-child {
-            &:after {
-                content: '';
-            }
-        }
-
-        .label {
-            color: #adafb2;
-            font-size: 12px;
-            font-weight: 400;
-            //font-size: 1.5vw;
-            text-transform: uppercase;
-        }
-    }
-}
