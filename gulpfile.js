@@ -160,6 +160,13 @@ gulp.task('copy-js', function() {
         .pipe(gulp.dest('./_site/assets/js/'));
 });
 
+// Copy fonts
+gulp.task('copy-fonts', function() {
+    //Cryptofont
+    gulp.src([nodepath + 'cryptofont/css/**/*']).pipe(gulp.dest('_site/assets/fonts/cryptofont/css/'));
+    gulp.src([nodepath + 'cryptofont/fonts/**/*']).pipe(gulp.dest('_site/assets/fonts/cryptofont/fonts/'));
+});
+
 //Copy images to production site
 gulp.task('copy-images', function() {
     gulp.src('images/**/*')
@@ -167,5 +174,5 @@ gulp.task('copy-images', function() {
 });
 
 gulp.task('init', ['setupBulma']);
-gulp.task('build', ['clean','copy','compile-js', 'copy-js', 'compile-sass', 'compile-scss', 'compile-html', 'copy-images']);
+gulp.task('build', ['clean','copy','compile-js', 'copy-js', 'compile-sass', 'compile-scss', 'compile-html', 'copy-fonts', 'copy-images']);
 gulp.task('default', ['server', 'watch']);

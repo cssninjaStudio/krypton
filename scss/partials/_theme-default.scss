@@ -37,3 +37,17 @@ $primary-box-shadow:  0 14px 26px -12px $primary-shadow-from, 0 4px 23px 0px $ba
 $secondary-shadow-from: rgba(0, 255, 153, 0.42);
 $secondary-shadow-to: rgba(51, 204, 255, 0.2);
 $secondary-box-shadow:  0 14px 26px -12px $secondary-shadow-from, 0 4px 23px 0px $base-shadow, 0 8px 10px -5px $secondary-shadow-to !important;
+
+
+
+.primary-gradient {
+    background: $primary;
+    background: -webkit-linear-gradient(to right, $primary, $primary-accent) !important;
+    background: linear-gradient(to right, $primary, $primary-accent) !important; 
+}
+
+.secondary-gradient {
+    background: $secondary;
+    background: -webkit-linear-gradient(to right, $secondary, $secondary-accent) !important;
+    background: linear-gradient(to right, $secondary, $secondary-accent) !important; 
+}

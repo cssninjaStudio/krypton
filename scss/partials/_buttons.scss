@@ -142,8 +142,8 @@ TABLE OF CONTENTS
                 left: 0;
                 border-radius: 3px;
                 background: #00ff99;  /* fallback for old browsers */
-                background: -webkit-linear-gradient(to bottom, #00ff99, #33ccff) !important;  /* Chrome 10-25, Safari 5.1-6 */
-                background: linear-gradient(to bottom, #00ff99, #33ccff) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                background: -webkit-linear-gradient(to left, #00ff99, #33ccff) !important;  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to left, #00ff99, #33ccff) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                 opacity: 1;
                 transition: all .6s ease-out !important;
                 z-index: 1;

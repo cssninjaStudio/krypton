@@ -1,3 +1,60 @@
+.video-button {
+    position: relative;
+    height: 54px;
+    width: 54px;
+    background: $secondary;
+    background: -webkit-linear-gradient(to right, $secondary, $secondary-accent) !important;
+    background: linear-gradient(to right, $secondary, $secondary-accent) !important; 
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    cursor: pointer;
+    img {
+        position: relative;
+        display: block;
+        width: 24px;
+        height: 24px;
+        left: 2px;
+        z-index: 3;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: calc(50% - 12px);
+        left: calc(50% - 12px);
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+        background: $secondary;
+        background: -webkit-linear-gradient(to right, $secondary, $secondary-accent) !important;
+        background: linear-gradient(to right, $secondary, $secondary-accent) !important; 
+        animation: pulse 1.6s infinite;
+        animation-duration: 2s;
+        transform-origin: center center ;
+        z-index: 0;
+    }
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    25% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4.5);
+        opacity: 0;
+    }
+}
+
+
 .feature {
     text-align: center;
     img {
@@ -104,13 +161,14 @@
 
 .tab-content {
     display: none;
-    min-height: 250px;
+    min-height: 312px;
     margin-top: 40px;
     &.is-active {
         display: block;
     }
     img {
-        height: 280px;
+        height: 320px;
+        animation-delay: .3s;
     }
     .ico-card {
         width: 100%;
@@ -172,16 +230,59 @@
         }
         .button-block {
             text-align: center;
-            margin: 40px 0 10px 0;
+            margin: 20px 0 10px 0;
             padding: 0 15%;
+        }
+        .icon-block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 0;
+            i {
+                margin: 0 5px;
+                color: $smoke-white;
+            }
         }
     }
     .text-content {
         h4 {
-            
+
         }
         p {
             animation-delay: .15s;
+        }
+        .custom-bullet-list {
+            li::before {
+                content: "೦ ";
+                color: $secondary;
+            }
+            li {
+                padding: 10px 0;
+                color: $white;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 300;
+                &:first-child {
+                    animation-delay: .15s;
+                }
+                &:nth-child(2) {
+                    animation-delay: .2s;
+                }
+                &:nth-child(3) {
+                    animation-delay: .25s;
+                }
+                span {
+                    &:first-child {
+                        font-family: 'Cabin', sans-serif;
+                    }
+                    &.item-content {
+                        margin: 0 16px !important;
+                        font-size: 90%;
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight: 300;
+                        color: #e8e8e8;
+                    }
+                }
+            }
         }
     }
 }
