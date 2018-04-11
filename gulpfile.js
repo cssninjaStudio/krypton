@@ -49,6 +49,13 @@ gulp.task('setupBulma', function() {
     gulp.src([nodepath + 'bulma/**/*.sass']).pipe(gulp.dest('bulma/'));
 });
 
+// Copy js plugins
+gulp.task('copy-plugins', function() {
+    //Modal video
+    gulp.src([nodepath + 'modal-video/js/**/*']).pipe(gulp.dest('_site/assets/js/modalvideo/'));
+    gulp.src([nodepath + 'modal-video/css/**/*']).pipe(gulp.dest('_site/assets/js/modalvideo/'));
+});
+
 // Copy assets
 gulp.task('copy', function() {
     //Copy other external css assets
@@ -149,6 +156,7 @@ gulp.task('compile-js', function() {
     return gulp.src([ 
         nodepath + 'jquery/dist/jquery.min.js', 
         nodepath + 'feather-icons/dist/feather.min.js',
+        nodepath + 'modal-video/js/modal-video.min.js',
     ])
         .pipe(concat('app.js'))
         .pipe(gulp.dest('./_site/assets/js/'));
@@ -174,5 +182,5 @@ gulp.task('copy-images', function() {
 });
 
 gulp.task('init', ['setupBulma']);
-gulp.task('build', ['clean','copy','compile-js', 'copy-js', 'compile-sass', 'compile-scss', 'compile-html', 'copy-fonts', 'copy-images']);
+gulp.task('build', ['clean','copy', 'copy-plugins', 'compile-js', 'copy-js', 'compile-sass', 'compile-scss', 'compile-html', 'copy-fonts', 'copy-images']);
 gulp.task('default', ['server', 'watch']);

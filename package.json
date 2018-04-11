@@ -40,6 +40,7 @@
     "bulma": "^0.6.2",
     "cryptofont": "^0.1.1",
     "feather-icons": "^4.7.0",
-    "jquery": "2.2.4"
+    "jquery": "2.2.4",
+    "modal-video": "^2.3.2"
   }
 }

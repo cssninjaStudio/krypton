@@ -1,0 +1,37 @@
+.team-member-container {
+    position: relative;
+    .dark-card, .color-card {
+        
+        width: 100%;
+        border-radius: 1px;
+        color: $white;
+        transition: all .4s;
+        &:hover {
+            //transform: rotateY(25deg);
+        }
+    }
+    .dark-card {
+        padding: 40px;
+        background: rgba(39, 0, 104, 0.4);
+        position: relative;
+        z-index: 2;
+    }
+    .color-card {
+        padding: 20px;
+        background: #7f00ff;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #7f00ff, #3f00fc) !important;  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #7f00ff, #3f00fc) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        position: absolute;
+        right: -15px;
+        bottom: -25px;
+        z-index: 0;
+    }
+    &:hover {
+        .dark-card {
+
+        }
+        .color-card {
+
+        }
+    }
+}

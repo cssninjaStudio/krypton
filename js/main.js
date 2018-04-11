@@ -67,6 +67,14 @@ $(document).ready(function() {
         $(this).addClass('is-active');
         $("#"+tab_id).addClass('is-active');
     })
+    
+    //Modal video
+
+        new ModalVideo('.js-modal-btn', {
+            channel: 'youtube',
+            autoplay: 1
+        });
+
 
     /* ---- particles.js config ---- */
 
