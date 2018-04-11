@@ -1,37 +1,119 @@
 .team-member-container {
     position: relative;
-    .dark-card, .color-card {
-        
+    .dark-card {
         width: 100%;
+        //min-height: 300px;
         border-radius: 1px;
         color: $white;
         transition: all .4s;
-        &:hover {
-            //transform: rotateY(25deg);
-        }
-    }
-    .dark-card {
-        padding: 40px;
-        background: rgba(39, 0, 104, 0.4);
+        padding: 20px 0;
+        text-shadow: 0 2px 4px rgba(4,27,99,.25);
+        background: rgba(17,149,247,.08);
+        border: 1px solid rgba(0,83,251,.5);
+        -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,.5), 0 0 25px 0 rgba(18,60,255,.16);
+        box-shadow: 0 2px 3px 0 rgba(0,0,0,.5), 0 0 25px 0 rgba(18,60,255,.16);
         position: relative;
         z-index: 2;
-    }
-    .color-card {
-        padding: 20px;
-        background: #7f00ff;  /* fallback for old browsers */
-                background: -webkit-linear-gradient(to right, #7f00ff, #3f00fc) !important;  /* Chrome 10-25, Safari 5.1-6 */
-                background: linear-gradient(to right, #7f00ff, #3f00fc) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        position: absolute;
-        right: -15px;
-        bottom: -25px;
-        z-index: 0;
-    }
-    &:hover {
-        .dark-card {
-
+        .avatar {
+            text-align: center;
+            position: relative;
+            height: 140px;
+            padding: 10px 0;
+            .circle-chart {
+                transform: scale(0.92);
+                position: absolute;
+                top: calc(50% - 70px);
+                left: calc(50% - 70px);
+                .circle-chart-circle {
+                    stroke: rgba(17,149,247,.0);
+                    stroke-dasharray: 0, 100;
+                    //stroke-dashoffset: 0, 100;
+                    transition: all .2s linear;
+                }
+                .circle-chart-background {
+                    stroke: rgba(17,149,247,.09);
+                    border: 1px solid rgba(0,83,251,.5);
+                }
+                &:hover {
+                    /*.circle-chart-circle{
+                    stroke-dashoffset: 100, 100;
+                    stroke-dasharray:  100, 100;
+                    stroke: $secondary;
+                }*/
+                }
+            }
+            img {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                left: 0;
+                right: 0;
+                //margin: 0 auto;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                transition: all .5s;
+                &.is-real {
+                    //display: none;
+                    opacity: 0;
+                }
+                &.is-sketch {
+                    //display: block;
+                    opacity: 1;
+                }
+            }
         }
-        .color-card {
+        &:hover {
+            background: rgba(17,149,247,.06);
+            border: 1px solid rgba(0,83,251,.8);
+            -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,.5), 0 0 25px 0 rgba(18,60,255,.24);
+            box-shadow: 0 2px 3px 0 rgba(0,0,0,.5), 0 0 25px 0 rgba(18,60,255,.24);
+            .avatar .circle-chart .circle-chart-circle{
+                //stroke-dashoffset: 100, 100;
+                stroke-dasharray:  100, 100;
+                stroke: $secondary;
+            }
+            img {
+                &.is-real {
+                    //display: block;
+                    opacity: 1;
+                }
+                &.is-sketch {
+                    //display: none;
+                    opacity: 0;
+                }
+            }
+        }
+        .member-info {
+            text-align: center;
+            .position {
+                text-transform: uppercase;
+                font-family: 'Open Sans', sans-serif;
+                font-size: .75rem;
+                color: $primary;
+            }
+            .description {
+                font-size: .8rem;
+                padding: 10px 20px;
+                color: rgba(94,147,255,.9);
+            }
+        }
+    }
+}
 
+.advisor-container {
+    img {
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+    }
+    .info {
+        .position {
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+            font-size: .75rem;
+            color: $primary;
         }
     }
 }

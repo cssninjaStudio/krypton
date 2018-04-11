@@ -224,6 +224,10 @@ body {
     background: url(../images/bg/gradient-left.png) no-repeat top left,url(../images/bg/gradient-right.png) no-repeat top right,#320184;
 }
 
+.has-big-dark-gradient {
+    background: url(../images/bg/gradient-left-darker.png) no-repeat top left,url(../images/bg/gradient-right-darker.png) no-repeat top right,#1c004c;
+}
+
 .cta-wrapper {
     margin: 30px 0;
     &.is-small {
@@ -254,6 +258,9 @@ body {
     &.is-tight {
         margin-bottom: 10px !important;
     }
+    &.is-compressed {
+        margin-bottom: 5px !important;
+    }
 }
 
 .title {
@@ -283,6 +290,9 @@ body {
     }
     &.is-long {
         width: 150px;
+    }
+    &.is-spacer {
+        margin-top: 120px;
     }
 }
 
