@@ -298,3 +298,16 @@ body {
 
 
 
+//
+.partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    .partner-item {
+        margin: 0 10px;
+        img {
+            height: 120px;
+        }
+    }
+}

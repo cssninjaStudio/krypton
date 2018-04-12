@@ -74,7 +74,9 @@ $(document).ready(function() {
             channel: 'youtube',
             autoplay: 1
         });
-
+    
+    //Icons
+    feather.replace();
 
     /* ---- particles.js config ---- */
 

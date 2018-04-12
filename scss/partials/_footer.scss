@@ -2,6 +2,14 @@
     padding: 100px 40px;
     background: #0f0330;
     text-align: center;
+    position: relative;
+    .solar-system {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 50%;
+        z-index: 0;
+    }
     .footer-logo {
         img {
             height: 75px;
@@ -25,6 +33,8 @@
     }
     .footer-columns {
         padding: 40px 0;
+        position: relative;
+        z-index: 1;
         .subscribe-block {
             .subscribe-title {
                 padding: 10px 0;
@@ -47,8 +57,12 @@
                     box-shadow: 0 2px 3px 0 rgba(0,0,0,.5), 0 0 25px 0 rgba(18,60,255,.16);
                     padding: 5px 130px 5px 30px;
                     color: $white;
+                    transition: all .4s;
                     &:focus, &:active {
                         outline: none !important;
+                        border: 1px solid rgba(0,83,251,.8) !important;
+                        -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,.5), 0 0 25px 0 rgba(18,60,255,.26) !important;
+                        box-shadow: 0 2px 3px 0 rgba(0,0,0,.5), 0 0 25px 0 rgba(18,60,255,.26) !important;
                     }
                 }
                 button {
@@ -100,7 +114,7 @@
                         -webkit-transform-origin: right center;
                         -ms-transform-origin: right center;
                         transform-origin: right center;
-                        height: 1px;
+                        height: 2px;
                         background: $secondary;
                         background: -webkit-linear-gradient(to right, $secondary, $secondary-accent) !important;
                         background: linear-gradient(to right, $secondary, $secondary-accent) !important; 
@@ -126,16 +140,20 @@
             }
         }
     }
-    
+
     .k-copyright {
+        position: relative;
         color: $primary;
         font-family: 'Open Sans', sans-serif;
         font-size: .85rem;
+        z-index: 2;
     }
     .coded-by {
+        position: relative;
         color: $white;
         font-family: 'Open Sans', sans-serif;
         font-size: .7rem;
+        z-index: 2;
         a {
             color: $secondary;
         }
