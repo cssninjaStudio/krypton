@@ -1,10 +1,23 @@
+/*! _theme-default.scss | Krypton | Kit1 | CSS Ninja */
 
+/* ==========================================================================
+Default theme variables 
+========================================================================== */
 
-/* -------------------------------- 
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Variables
+1. Shadow variables
+2. Gradient mixins
+=============================================================================
+***/
 
-Main Components 
+/* ==========================================================================
+0. Landing page timeline
+========================================================================== */
 
--------------------------------- */
+//Timeline wrapper
 .krypton-timeline {
     opacity: 0;
     margin: 0 auto;
@@ -12,12 +25,12 @@ Main Components
     -moz-transition: opacity 0.2s;
     transition: opacity 0.2s;
     &:before {
-        /* never visible - this is used in jQuery to check the current MQ */
+        //ever visible, this is used in jQuery to check the current media screen
         content: 'mobile';
         display: none; 
     }
     &.loaded {
-        /* show the timeline after events position has been set (using JavaScript) */
+        // show the timeline after events position has been set (using JavaScript)
         opacity: 1;
     }
     .timeline {
@@ -27,13 +40,13 @@ Main Components
         max-width: 800px;
         margin: 0 auto;
     }
+    //Controls
     .events-wrapper {
         position: relative;
         height: 100%;
         margin: 0 40px;
         overflow: hidden;
         &:after, &:before {
-            /* these are used to create a shadow effect at the sides of the timeline */
             content: '';
             position: absolute;
             z-index: 2;
@@ -43,23 +56,19 @@ Main Components
         }
         &:before {
             left: 0;
-            //background-image: -webkit-linear-gradient( left , #f8f8f8, rgba(248, 248, 248, 0));
-            //background-image: linear-gradient(to right, #f8f8f8, rgba(248, 248, 248, 0));
         }
         &:after {
             right: 0;
-            //background-image: -webkit-linear-gradient( right , #f8f8f8, rgba(248, 248, 248, 0));
-            //background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0));
         }
     }
     .events {
-        /* this is the grey line/timeline */
+        //Grey line/timeline 
         position: absolute;
         z-index: 1;
         left: 0;
         top: 49px;
         height: 2px;
-        /* width will be set using JavaScript */
+        //Width is set using JavaScript
         background: #dfdfdf;
         -webkit-transition: -webkit-transform 0.4s;
         -moz-transition: -moz-transform 0.4s;
@@ -73,7 +82,7 @@ Main Components
             font-size: .75rem;
             font-family: 'Cabin', sans-serif;
             padding-bottom: 15px;
-            /* fix bug on Safari - text flickering while timeline translates */
+            //Fix for issue on Safari - text flickering while timeline translates
             -webkit-transform: translateZ(0);
             -moz-transform: translateZ(0);
             -ms-transform: translateZ(0);
@@ -98,7 +107,7 @@ Main Components
                 left:50%;
             }
             &:after {
-                /* this is used to create the event spot */
+                //Event dot
                 content: '';
                 position: absolute;
                 left: 50%;
@@ -118,6 +127,7 @@ Main Components
                 -moz-transition: background-color 0.3s, border-color 0.3s;
                 transition: background-color 0.3s, border-color 0.3s;
             }
+            //Selected state
             &.selected {
                 pointer-events: none;
                 &:after {
@@ -127,6 +137,7 @@ Main Components
                     border-color: $secondary;
                 }
             }
+            //Old state
             &.older-event {
                 &:after {
                     border-color: $secondary;
@@ -135,7 +146,7 @@ Main Components
         }
     }
     .filling-line {
-        /* this is used to create the green line filling the timeline */
+        //Green line filling the timeline 
         position: absolute;
         z-index: 1;
         left: 0;
@@ -161,18 +172,20 @@ Main Components
     }
 }
 
+//Timeline content
 .events-content {
     position: relative;
     width: 100%;
     min-height: 300px;
-    //margin: 2em 0;
     overflow: hidden;
     -webkit-transition: height 0.4s;
     -moz-transition: height 0.4s;
     transition: height 0.4s;
+    //List
     ol {
         list-style-type: none;
     }
+    //List item
     li {
         position: absolute;
         z-index: 1;
@@ -198,7 +211,7 @@ Main Components
         -moz-animation-timing-function: ease-in-out;
         animation-timing-function: ease-in-out;
         &.selected {
-            /* visible event content */
+            //Visible event content
             position: relative;
             z-index: 2;
             opacity: 1;
@@ -208,6 +221,7 @@ Main Components
             -o-transform: translateX(0);
             transform: translateX(0);
         }
+        //Transitions
         &.enter-right, &.leave-right {
             -webkit-animation-name: cd-enter-right;
             -moz-animation-name: cd-enter-right;
@@ -224,9 +238,9 @@ Main Components
             animation-direction: reverse;
         }
         > * {
-            //max-width: 600px;
             margin: 0 auto;
         }
+        //Title
         .title-wrapper {
             display: flex;
             justify-content: flex-start;
@@ -246,6 +260,7 @@ Main Components
             font-weight: 700;
             line-height: 1.2;
         }
+        //Textual content
         small, p {
             line-height: 1.6;
         }
@@ -261,9 +276,10 @@ Main Components
     }
 }
 
+//Timeline Navigation
 .timeline-navigation {
     a {
-        /* these are the left/right arrows to navigate the timeline */
+        //Left and right arrows
         position: absolute;
         z-index: 1;
         top: 50%;
@@ -277,7 +293,7 @@ Main Components
         width: 34px;
         border-radius: 50%;
         border: 2px solid #dfdfdf;
-        /* replace text with an icon */
+        //Icon
         overflow: hidden;
         color: transparent;
         text-indent: 100%;
@@ -286,7 +302,7 @@ Main Components
         -moz-transition: border-color 0.3s;
         transition: border-color 0.3s;
         &:after {
-            /* arrow icon */
+            //Arrow icon
             content: '';
             color: #fff;
             position: absolute;
@@ -303,6 +319,7 @@ Main Components
             transform: translateX(-50%) translateY(-50%);
             
         }
+        //Previous button
         &.prev {
             left: 0;
             -webkit-transform: translateY(-50%);
@@ -312,10 +329,12 @@ Main Components
             transform: translateY(-50%);
             background: url(../images/icons/chevron-left.svg) no-repeat 0 0;
         }
+        //Next button
         &.next {
             right: 0;
             background: url(../images/icons/chevron-right.svg) no-repeat 0 0;
         }
+        //Inactive state
         &.inactive {
             cursor: default;
             &:after {
@@ -325,6 +344,7 @@ Main Components
     }
 }
 
+//No touch settings
 .no-touch {
     .krypton-timeline .events a:hover::after {
         background-color: #7b9d6f;
@@ -339,30 +359,32 @@ Main Components
 
 }
 
-
+//Desktop media queries
 @media only screen and (min-width: 1100px) {
     .krypton-timeline {
         margin: 40px auto;
         &:before {
-            /* never visible - this is used in jQuery to check the current MQ */
             content: 'desktop';
         }
     }
 
 }
 
-@media only screen and (min-width: 768px) {
-    .cd-horizontal-timeline .events-content h2 {
+//Mobile media queries
+/*@media only screen and (min-width: 768px) {
+    .krypton-timeline .events-content h2 {
         font-size: 7rem;
     }
-    .cd-horizontal-timeline .events-content em {
+    .krypton-timeline .events-content em {
         font-size: 2rem;
     }
-    .cd-horizontal-timeline .events-content p {
+    .krypton-timeline .events-content p {
         font-size: 1.8rem;
     }
-}
+}*/
 
+
+//Keyframes enter from right
 @-webkit-keyframes cd-enter-right {
     0% {
         opacity: 0;
@@ -373,6 +395,7 @@ Main Components
         -webkit-transform: translateX(0%);
     }
 }
+
 @-moz-keyframes cd-enter-right {
     0% {
         opacity: 0;
@@ -383,6 +406,7 @@ Main Components
         -moz-transform: translateX(0%);
     }
 }
+
 @keyframes cd-enter-right {
     0% {
         opacity: 0;
@@ -401,6 +425,8 @@ Main Components
         transform: translateX(0%);
     }
 }
+
+//Keyframes enter from left
 @-webkit-keyframes cd-enter-left {
     0% {
         opacity: 0;
@@ -411,6 +437,7 @@ Main Components
         -webkit-transform: translateX(0%);
     }
 }
+
 @-moz-keyframes cd-enter-left {
     0% {
         opacity: 0;
@@ -421,6 +448,7 @@ Main Components
         -moz-transform: translateX(0%);
     }
 }
+
 @keyframes cd-enter-left {
     0% {
         opacity: 0;

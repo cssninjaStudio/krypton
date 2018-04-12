@@ -1,4 +1,23 @@
+/*! _blog.scss | Krypton | Kit 1 | CSS Ninja */
+
+/* ==========================================================================
+Blog Posts
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Landing page blog posts
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Landing page blog posts
+========================================================================== */
+
+//Post item
 .blog-post {
+    //featured image
     img {
         display: block;
         width: 100%;
@@ -13,6 +32,7 @@
         overflow: hidden;
         box-shadow: 0 15px 26px rgba(0, 0, 0, 0.4);
     }
+    //Link style
     a {
         display: flex;
         padding: 50px;
@@ -34,14 +54,17 @@
             transition: all .3s ease;
         }
     }
+    //Content
     .content {
         width: 65%;
+        //Post title
         .post-title {
             font-size: 1.2rem;
             text-transform: capitalize;
             color:$white;
             font-weight: 500;
             font-family: 'Cabin', sans-serif;
+            //Date
             .blog-date {
                 font-size: 12px;
                 margin-left: 20px;
@@ -57,6 +80,7 @@
                 }
             }
         }
+        //Separator
         .rounded {
             margin-left: 0;
             margin-top: 5px;
@@ -65,15 +89,16 @@
             height: 3px;
             border-radius: 6px;
             background-image: linear-gradient(to right, #25aae1, #40e495);
-            /* background: #2bb769; */
             margin-left: 0;
             margin-top: 10px;
             margin-bottom: 10px;
         }
+        //Post meta
         .post-meta {
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            //Author
             .author-block {
                 display: flex;
                 justify-content: flex-start;
@@ -88,6 +113,7 @@
                     padding: 0 10px;
                 }
             }
+            //Comments and likes count
             .stats-block {
                 margin-left: auto;
                 display: flex;
@@ -126,9 +152,9 @@
     }
 }
 
-
+//Specific Media queries for blog posts
 @media screen and (max-width: 768px){
-
+    
     .blog-post {
         width: 92%;
         margin: auto;

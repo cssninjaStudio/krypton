@@ -1,12 +1,28 @@
-$font-color: #7A7572;
+/*! _faq.scss | Krypton | Kit 1 | CSS Ninja */
+
+/* ==========================================================================
+FAQ section styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Accordion
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Accordion
+========================================================================== */
 
 .accordion {
     margin: 3em auto;
     max-width: 30em;
+    //toggle section
     .accordion-toggle {
         display: none;
     }
-
+    //Clickable block
     .accordion-option {
         position: relative;
         margin-bottom: 1em;
@@ -20,9 +36,8 @@ $font-color: #7A7572;
             transform: translateZ(0);
             transition: all 0.4s;
         }
-
+        //Title
         .accordion-title {
-            //background: #fff;
             padding: 1em;
             display: block;
             color: $white;
@@ -38,19 +53,16 @@ $font-color: #7A7572;
             top: 1.25em;
             width: 2px;
             height: 0.75em;
-            background: $primary;
-            background: -webkit-linear-gradient(to right, $primary, $primary-accent) !important;
-            background: linear-gradient(to right, $primary, $primary-accent) !important; 
+            @include primary-gradient-right();
             transition: all 0.2s;
         }
         .accordion-title:after {
             transform: rotate(90deg);
         }
-
+        //Content
         .accordion-content {
             max-height: 0;
             overflow: hidden;
-            //background-color: #fff;
             p {
                 margin: 0;
                 padding: 0.5em 1em 1em;
@@ -59,12 +71,8 @@ $font-color: #7A7572;
                 color: rgba(94,147,255,.9);
             }
         }
-
+        //Behaviour
         .accordion-toggle:checked {
-            & + .accordion-title,
-            & + .accordion-title + .accordion-content {
-                //box-shadow: 3px 3px 6px #ddd, -3px 3px 6px #ddd;
-            }
             & + .accordion-title + .accordion-content {
                 max-height: 500px;
             }

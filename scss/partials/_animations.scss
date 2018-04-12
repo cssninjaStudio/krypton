@@ -1,5 +1,22 @@
+/*! _animations.scss | Krypton | Kit 1 | CSS Ninja */
+
 /* ==========================================================================
-6. Fade in Up animation
+Animations
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Fade in Up animation
+1. Levitate animation
+2. Infinite rotate
+3. Gelatine
+4. Pulse animation
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Fade in Up animation
 ========================================================================== */
 
 .animated {
@@ -9,7 +26,6 @@
     -webkit-animation-fill-mode: both;
 }
 
-//Keyframes
 @-webkit-keyframes fadeInUp {
     from {
         -webkit-transform: translate3d(0, 20px, 0);
@@ -32,7 +48,8 @@
         opacity: 1;
     }
 }
-//Settings
+
+
 .preFadeInUp {
     opacity: 0;
 }
@@ -43,11 +60,11 @@
     animation-name: fadeInUp;
 }
 
+
 /* ==========================================================================
-12. Levitate animation
+1. Levitate animation
 ========================================================================== */
 
-//Keyframes
 @-webkit-keyframes levitate {
     from {
         -webkit-transform: translate(0, 0);
@@ -69,7 +86,8 @@
     to {
         -webkit-transform: translate(0, 0);
         transform: translate(0, 0); } }
-//Settings
+
+
 .levitate {
     -webkit-animation-name: levitate;
     animation-name: levitate;
@@ -82,23 +100,19 @@
 }
 
 
+/* ==========================================================================
+2. Infinite rotate
+========================================================================== */
 
-
-
-
-//
-@keyframes rotating
-{
-    from
-    {
+@keyframes rotating {
+    from {
         transform: rotate(0deg);
         -o-transform: rotate(0deg);
         -ms-transform: rotate(0deg);
         -moz-transform: rotate(0deg);
         -webkit-transform: rotate(0deg);
     }
-    to
-    {
+    to {
         transform: rotate(360deg);
         -o-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
@@ -106,21 +120,18 @@
         -webkit-transform: rotate(360deg);
     }
 }
-@-webkit-keyframes rotating
-{
-    from
-    {
+
+@-webkit-keyframes rotating {
+    from {
         transform: rotate(0deg);
         -webkit-transform: rotate(0deg);
     }
-    to
-    {
+    to {
         transform: rotate(360deg);
         -webkit-transform: rotate(360deg);
     }
 }
-.rotating
-{
+.rotating {
     -webkit-animation: rotating 6s linear infinite;
     -moz-animation: rotating 6s linear infinite;
     -ms-animation: rotating 6s linear infinite;
@@ -129,9 +140,8 @@
 }
 
 
-
 /* ==========================================================================
-9. Gelatine animation
+3. Gelatine animation
 ========================================================================== */
 
 @-webkit-keyframes gelatine {
@@ -154,4 +164,23 @@
     animation-duration: 0.6s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
+}
+
+/* ==========================================================================
+4. Pulse animation
+========================================================================== */
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    25% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4.5);
+        opacity: 0;
+    }
 }

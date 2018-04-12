@@ -9,6 +9,7 @@ TABLE OF CONTENTS
 =============================================================================
 0. Variables
 1. Shadow variables
+2. Gradient mixins
 =============================================================================
 ***/
 
@@ -50,4 +51,49 @@ $secondary-box-shadow:  0 14px 26px -12px $secondary-shadow-from, 0 4px 23px 0px
     background: $secondary;
     background: -webkit-linear-gradient(to right, $secondary, $secondary-accent) !important;
     background: linear-gradient(to right, $secondary, $secondary-accent) !important; 
+}
+
+/* ==========================================================================
+2. Gradient mixins
+========================================================================== */
+
+@mixin theme-hero-gradient(){
+    background-image: -webkit-linear-gradient(to bottom, #5202d8 0%, #3c019e 100%);
+    background-image: linear-gradient(to bottom, #5202d8 0%, #3c019e 100%);
+}
+
+@mixin primary-gradient-top(){
+    background: $primary;
+    background: -webkit-linear-gradient(to top, $primary, $primary-accent) !important;
+    background: linear-gradient(to top, $primary, $primary-accent) !important; 
+}
+
+@mixin primary-gradient-left(){
+    background: $primary;
+    background: -webkit-linear-gradient(to left, $primary, $primary-accent) !important;
+    background: linear-gradient(to left, $primary, $primary-accent) !important; 
+}
+
+@mixin primary-gradient-right(){
+    background: $primary;
+    background: -webkit-linear-gradient(to right, $primary, $primary-accent) !important;
+    background: linear-gradient(to right, $primary, $primary-accent) !important; 
+}
+
+@mixin secondary-gradient-top(){
+    background: $secondary;
+    background: -webkit-linear-gradient(to top, $primary, $secondary-accent) !important;
+    background: linear-gradient(to top, $primary, $secondary-accent) !important; 
+}
+
+@mixin secondary-gradient-right(){
+    background: $secondary;
+    background: -webkit-linear-gradient(to right, $secondary, $secondary-accent) !important;
+    background: linear-gradient(to right, $secondary, $secondary-accent) !important; 
+}
+
+@mixin secondary-gradient-left(){
+    background: $secondary;
+    background: -webkit-linear-gradient(to left, $secondary, $secondary-accent) !important;
+    background: linear-gradient(to left, $secondary, $secondary-accent) !important; 
 }

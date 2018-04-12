@@ -1,4 +1,4 @@
-/*! _buttons.scss | Cryptos | Kit 1 | CSS Ninja */
+/*! _buttons.scss | Krypton | Kit 1 | CSS Ninja */
 
 /* ==========================================================================
 Button styles
@@ -13,23 +13,28 @@ TABLE OF CONTENTS
 ***/
 
 /* ==========================================================================
-0. Basic buttons
+0. Krypton button
 ========================================================================== */
 
+//Base class
 .button {
+    //Krypton modifier
     &.k-button {
         min-width: 130px;
-        //font-weight: 400;
         font-size: .75rem;
         height: 40px;
+        //fat modifier
         &.is-fat {
             padding: 26px 40px !important;
         }
+        //If the element is a button rather than a link
+        &.is-button {
+            line-height: 0;
+        }
     }
-    //Hover raised buttons
+    //Hover raised modifier
     &.raised:hover {
         box-shadow: 0 14px 26px -12px rgba(0, 0, 0, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2) !important;
-        //opacity: 0.8;
     }
     //Uppercase button
     &.upper-button {
@@ -45,6 +50,7 @@ TABLE OF CONTENTS
         text-transform: uppercase;
         border-width: 2px;
     }
+    //Slanted button
     &.slanted {
         transform: skewX(-18deg);
         border: none !important;
@@ -55,16 +61,15 @@ TABLE OF CONTENTS
             z-index: 3;
         }
     }
+    //Primary Krypton button
     &.k-primary {
         color: $white;
+        //Gradient modifier
         &.has-gradient {
             position: relative;
             transition: all .6s ease-out !important;
-            //background-size:1px 200px; 
             border: none !important;
-            background: #7f00ff;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to top, #7f00ff, #3f00fc) !important;  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to top, #7f00ff, #3f00fc) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            @include primary-gradient-top();
             opacity: 1;
             z-index: 0;
             .text {
@@ -73,11 +78,13 @@ TABLE OF CONTENTS
                 z-index: 3;
                 opacity: 1 !important;
             }
+            //Hover state
             &:hover {
                 .front-gradient {
                     opacity: 0;
                 }
             }
+            //Gradient front element
             .front-gradient {
                 display: flex;
                 justify-content: center;
@@ -88,36 +95,41 @@ TABLE OF CONTENTS
                 top: 0;
                 left: 0;
                 border-radius: 3px;
-                background: #7f00ff;  /* fallback for old browsers */
-                background: -webkit-linear-gradient(to right, #7f00ff, #3f00fc) !important;  /* Chrome 10-25, Safari 5.1-6 */
-                background: linear-gradient(to right, #7f00ff, #3f00fc) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                @include primary-gradient-right();
                 opacity: 1;
                 transition: all .6s ease-out !important;
                 z-index: 1;
             }
+            //Rounded modifier
             &.rounded {
                 .front-gradient {
                     border-radius: 1000px;
                 }
             }
+            //Raised modifier
             &.raised {
                 &:hover {
                     box-shadow: $primary-box-shadow !important;
                     opacity: 0.95;
                 }
             }
+            //Submit modifier
+            &.is-submit {
+                &:hover {
+                    transform: translateY(-10px);
+                }
+            }
         }
     }
+    //Secondary Krypton button
     &.k-secondary {
         color: $white;
+        //Gradient modifier
         &.has-gradient {
             position: relative;
             transition: all .6s ease-out !important;
-            //background-size:1px 200px; 
             border: none !important;
-            background: #00ff99;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #00ff99, #33ccff) !important;  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #00ff99, #33ccff) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            @include secondary-gradient-right();
             opacity: 1;
             z-index: 0;
             .text {
@@ -126,11 +138,13 @@ TABLE OF CONTENTS
                 z-index: 3;
                 opacity: 1 !important;
             }
+            //Hover state
             &:hover {
                 .front-gradient {
                     opacity: 0;
                 }
             }
+            //Gradient front element
             .front-gradient {
                 display: flex;
                 justify-content: center;
@@ -141,18 +155,18 @@ TABLE OF CONTENTS
                 top: 0;
                 left: 0;
                 border-radius: 3px;
-                background: #00ff99;  /* fallback for old browsers */
-                background: -webkit-linear-gradient(to left, #00ff99, #33ccff) !important;  /* Chrome 10-25, Safari 5.1-6 */
-                background: linear-gradient(to left, #00ff99, #33ccff) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                @include secondary-gradient-left();
                 opacity: 1;
                 transition: all .6s ease-out !important;
                 z-index: 1;
             }
+            //Rounded modifier
             &.rounded {
                 .front-gradient {
                     border-radius: 1000px;
                 }
             }
+            //Raised modifier
             &.raised {
                 &:hover {
                     box-shadow: $secondary-box-shadow !important;
@@ -161,72 +175,6 @@ TABLE OF CONTENTS
             }
         }
     }
-}
-
-.button {
-    //Hover raised buttons
-    &.raised:hover {
-        box-shadow: 0 14px 26px -12px rgba(0, 0, 0, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-        //opacity: 0.8;
-    }
-    //Uppercase button
-    &.upper-button {
-        text-transform: uppercase;
-    }
-    //Rounded buttons
-    &.rounded {
-        border-radius: 500px;
-    }
-    &.slanted {
-        transform: skewX(-18deg);
-        border: none !important;
-        /*.front-gradient {
-        transform: skewX(-18deg); 
-    }
-        .text-upper {
-        transform: skewX(18deg);
-    }*/
-    }
-    //Helios CTA button
-    &.feather-button {
-        min-width: 130px;
-        font-weight: 200;
-        //font-size: 80%;
-        font-size: .75rem;
-        height: 40px;
-        &.is-fat {
-            padding: 26px 40px !important;
-        }
-        &.is-pushed {
-            margin-left: auto;
-        }
-        svg {
-            position: relative;
-            top: 1px;
-            width: 17px;
-            height: 17px;
-            margin-right: 8px;
-        }
-        //size modifier
-        &.is-small {
-            min-width: 100px;
-            height: 32px;
-            font-size: 60%;
-            font-weight: 500;
-        }
-        //Bold weight
-        &.is-bold {
-            font-weight: 500 !important;
-
-            text-transform: uppercase;
-            border-width: 2px;
-        }
-    }
-}
-
-button[type=submit], .will-upload {
-    display: block !important;
-    text-align: center !important;
 }
 
 /* ==========================================================================
@@ -290,21 +238,6 @@ button[type=submit], .will-upload {
     }
     &:focus {
         border-color: $secondary;
-    }
-    &.has-gradient {
-        transition: background 4s ease-out !important;
-        background-size:1px 200px; 
-        border: none !important;
-        background: #00D1B2 !important;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #00D1B2, #00D1B2) !important;  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #00D1B2, #00D1B2) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        &:hover {
-            background-position:100px !important;
-            background: #00C9FF !important;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF) !important;  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #92FE9D, #00C9FF) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-        }
     }
 }
 

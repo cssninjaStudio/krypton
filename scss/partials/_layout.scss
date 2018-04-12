@@ -13,12 +13,18 @@ TABLE OF CONTENTS
 ***/
 
 /* ==========================================================================
-1. Index Hero
+1. Index Hero and Navbar
+2. Main content wrapper
+3. Partners and Client logos
 ========================================================================== */
 
 body {
     overflow: hidden;
 }
+
+/* ==========================================================================
+1. Index Hero and Navbar
+========================================================================== */
 
 //Hero
 .hero {
@@ -32,9 +38,10 @@ body {
         max-height: 100vh;
     }
     //Background gradient
-    &.is-demo {
-        background-image: linear-gradient(to bottom, #5202d8 0%, #3c019e 100%);
+    &.is-hero-gradient {
+        @include theme-hero-gradient();
     }
+    //Floating squares image
     .hero-square {
         width: 100%;
         height: 100%;
@@ -42,6 +49,7 @@ body {
         top: 0;
         left: 0;
     }
+    //Js particles
     #particles-js {
         position: absolute;
         top: 0;
@@ -80,12 +88,14 @@ body {
                 text-transform: uppercase;
                 letter-spacing: 3px;
             }
+            //Removing navbar item default hover behaviour
             &:hover {
                 .navbar-item {
                     background: transparent !important;
                 }
             }
         }
+        //Navbar items
         .navbar-item {
             a.button {
                 font-family: 'Cabin', sans-serif; 
@@ -95,6 +105,7 @@ body {
                     font-weight: 500 !important;
                 }
             }
+            //Nav link modifier
             &.is-nav-link {
                 a {
                     font-family: 'Cabin', sans-serif;
@@ -103,7 +114,7 @@ body {
                 }
             }
         }
-        //Light navbar
+        //Color modifiers
         &.is-light, &.is-dark {
             .navbar-brand {
                 .brand-name {
@@ -141,6 +152,7 @@ body {
                     color: $primary;
                 }
             }
+            //Dark modifier
             &.is-dark {
                 background: #2d0275 !important;
                 a {
@@ -164,11 +176,13 @@ body {
             transform: translateY(0); 
         }
     }
+    //logo
     .hero-logo {
         height: 80px;
     }
 }
 
+//Telegram icon tweaking to insert into navbar
 .telegram {
     height: 13px;
     margin: 0 5px;
@@ -176,28 +190,41 @@ body {
     top: 2px;
 }
 
-//Main wrapper
+
+/* ==========================================================================
+2. Main content wrapper
+========================================================================== */
+
 .content-wrapper {
     padding: 20px 0;
     position: relative;
     z-index: 2;
+    //Medium size modifier
     &.is-medium {
         padding: 40px 0;
     }
+    //Large size modifier
     &.is-large {
         padding: 60px 0;
     }
 }
 
+/* ==========================================================================
+3. Sections
+========================================================================== */
+
 .section {
     outline: none !important;
     position: relative;
+    //Outline reset
     &:active, &:focus {
         outline: none !important;
     }
+    //relative modifier
     &.is-relative {
         position: relative;
     }
+    //Background colors
     &.is-dark {
         background: #3c019e;
     }
@@ -210,7 +237,8 @@ body {
     &.is-end {
         background: #1c004c;
     }
-    .hero-square-2 {
+    //Background shapes
+    .has-bg-shapes {
         width: 100%;
         height: 100%;
         position: absolute;
@@ -220,14 +248,17 @@ body {
     }
 }
 
+//Radial gradient background
 .has-big-gradient {
     background: url(../images/bg/gradient-left.png) no-repeat top left,url(../images/bg/gradient-right.png) no-repeat top right,#320184;
 }
 
+//Dark radial gradient background
 .has-big-dark-gradient {
     background: url(../images/bg/gradient-left-darker.png) no-repeat top left,url(../images/bg/gradient-right-darker.png) no-repeat top right,#1c004c;
 }
 
+//CTA Spacing
 .cta-wrapper {
     margin: 30px 0;
     &.is-small {
@@ -239,30 +270,38 @@ body {
 1. Titles
 ========================================================================== */
 
+//Common styles
 .title, .subtitle {
+    //lighttext modifier
     &.is-light {
         color: $white;
         + p {
             color: $white;
         }
     }
+    //Semibold modifier
     &.is-semibold {
         font-weight: 600;
     }
+    //Thin modifier
     &.is-thin {
         font-weight: 300 !important;
     }
+    //Uppercase modifier
     &.is-uppercase {
         text-transform: uppercase;
     }
+    //Small spacing modifier
     &.is-tight {
         margin-bottom: 10px !important;
     }
+    //Ultra small spacing modifier
     &.is-compressed {
         margin-bottom: 5px !important;
     }
 }
 
+//Titles
 .title {
     font-family: 'Cabin', sans-serif;
     &.main-title {
@@ -270,6 +309,7 @@ body {
     }
 }
 
+//Subtitles
 .subtitle {
     font-family: 'Cabin', sans-serif;
     &.is-compact {
@@ -278,36 +318,42 @@ body {
     }
 }
 
+//Divider
 .divider {
     height: 3px;
     width: 75px;
-    background: #7f00ff;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #7f00ff, #3f00fc) !important;  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #7f00ff, #3f00fc) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    @include primary-gradient-left();
     margin: 20px 0;
+    //Centered modifier
     &.is-centered {
         margin: 20px auto;
     }
+    //Long modifier
     &.is-long {
         width: 150px;
     }
+    //Acts as a spacing element
     &.is-spacer {
         margin-top: 120px;
     }
 }
 
 
+/* ==========================================================================
+3. Partners and Client logos
+========================================================================== */
 
-//
+//Wrapper
 .partners {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 60px;
+    //Item
     .partner-item {
         margin: 0 10px;
         img {
-            height: 120px;
+            height: 100px;
         }
     }
 }
