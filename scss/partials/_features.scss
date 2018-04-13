@@ -123,7 +123,7 @@ TABLE OF CONTENTS
     //tabs
     .flying-tabs {
         //tab-item
-        li {
+        .flying-child {
             display: inline;
             text-align: center;
             &.is-active a {
@@ -148,19 +148,19 @@ TABLE OF CONTENTS
             margin: 0;
         }
 
-        .tab-2.is-active ~ hr {
+        .tab-2.is-active ~ .slider {
             margin-left: 25%;
         }
 
-        .tab-3.is-active ~ hr {
+        .tab-3.is-active ~ .slider {
             margin-left: 50%;
         }
 
-        .tab-4.is-active ~ hr {
+        .tab-4.is-active ~ .slider {
             margin-left: 75%;
         }
         //Flying underline
-        hr {
+        .slider {
             height: 2px;
             border-radius: 10px;
             width: 25%;

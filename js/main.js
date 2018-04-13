@@ -63,10 +63,10 @@ $(document).ready(function() {
     });
 
     //Navigation Tabs
-    $('.flying-tabs li').on('click', function() {
+    $('.flying-tabs .flying-child').on('click', function() {
         var tab_id = $(this).attr('data-tab');
 
-        $(this).siblings('li').removeClass('is-active');
+        $(this).siblings('.flying-child').removeClass('is-active');
         $(this).closest('.flying-wrapper').find('.flying-tabs-content').children('.tab-content').removeClass('is-active');
 
         $(this).addClass('is-active');
