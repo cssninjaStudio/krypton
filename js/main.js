@@ -31,14 +31,19 @@ $(document).ready(function() {
     //Mobile menu toggle
     if ($('.navbar-burger').length) {
         $('.navbar-burger').on("click", function(){
-            $('.navbar-burger').toggleClass('is-active');
-            if ($('.navbar-menu').hasClass('is-active')) {
+            
+            var menu_id = $(this).attr('data-target');
+            $(this).toggleClass('is-active');
+            $("#"+menu_id).toggleClass('is-active');
+            $('.navbar.is-light').toggleClass('is-dark-mobile')
+            
+            /*if ($('.navbar-menu').hasClass('is-active')) {
                 $('.navbar-menu').removeClass('is-active');
                 $('.navbar').removeClass('is-dark-mobile');
             } else {
                 $('.navbar-menu').addClass('is-active');
                 $('.navbar').addClass('is-dark-mobile');
-            }
+            }*/
         });
     }
 
@@ -56,7 +61,7 @@ $(document).ready(function() {
         }
         //} 
     });
-    
+
     //Navigation Tabs
     $('.flying-tabs li').on('click', function() {
         var tab_id = $(this).attr('data-tab');
@@ -67,16 +72,31 @@ $(document).ready(function() {
         $(this).addClass('is-active');
         $("#"+tab_id).addClass('is-active');
     })
-    
+
     //Modal video
 
-        new ModalVideo('.js-modal-btn', {
-            channel: 'youtube',
-            autoplay: 1
-        });
-    
+    new ModalVideo('.js-modal-btn', {
+        channel: 'youtube',
+        autoplay: 1
+    });
+
     //Icons
     feather.replace();
+
+    //Fix for portrait tabs flex display
+    if (window.matchMedia('(min-width: 768px)').matches) {
+        $('.tab-content-wrapper').addClass('is-flex-mobile');
+    } else {
+        $('.tab-content-wrapper').removeClass('is-flex-mobile');
+    }
+
+    $(window).on('resize', function() {
+        if (window.matchMedia('(min-width: 768px)').matches) {
+            $('.tab-content-wrapper').addClass('is-flex-mobile');
+        } else {
+            $('.tab-content-wrapper').removeClass('is-flex-mobile');
+        }
+    })
 
     /* ---- particles.js config ---- */
 

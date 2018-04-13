@@ -161,6 +161,11 @@ body {
                         color: #fcfcfc;
                     }
                 }
+                .navbar-menu {
+                    &.is-active {
+                        background: #2d0275 !important;
+                    }
+                }
             }
         }
     }
