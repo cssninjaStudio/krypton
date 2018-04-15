@@ -54,6 +54,11 @@ gulp.task('copy-plugins', function() {
     //Modal video
     gulp.src([nodepath + 'modal-video/js/**/*']).pipe(gulp.dest('_site/assets/js/modalvideo/'));
     gulp.src([nodepath + 'modal-video/css/**/*']).pipe(gulp.dest('_site/assets/js/modalvideo/'));
+    //Particles js
+    gulp.src([nodepath + 'particlesjs/dist/**/*']).pipe(gulp.dest('_site/assets/js/particlesjs/'));
+    //Aos
+    gulp.src([nodepath + 'aos/dist/**/*']).pipe(gulp.dest('_site/assets/js/aos/'));
+    
 });
 
 // Copy assets
@@ -155,8 +160,10 @@ gulp.task('compile-html:reset', function(done) {
 gulp.task('compile-js', function() {
     return gulp.src([ 
         nodepath + 'jquery/dist/jquery.min.js', 
+        //nodepath + 'particlesjs/dist/particles.min.js',
         nodepath + 'feather-icons/dist/feather.min.js',
         nodepath + 'modal-video/js/modal-video.min.js',
+        nodepath + 'jquery.easing/jquery.easing.min.js',
     ])
         .pipe(concat('app.js'))
         .pipe(gulp.dest('./_site/assets/js/'));

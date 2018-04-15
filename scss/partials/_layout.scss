@@ -16,6 +16,7 @@ TABLE OF CONTENTS
 1. Index Hero and Navbar
 2. Main content wrapper
 3. Partners and Client logos
+4. Token page
 ========================================================================== */
 
 body {
@@ -317,6 +318,7 @@ body {
 //Subtitles
 .subtitle {
     font-family: 'Cabin', sans-serif;
+    opacity: 0.8;
     &.is-compact {
         max-width: 600px;
         margin: 0 auto;
@@ -359,6 +361,370 @@ body {
         margin: 0 10px;
         img {
             height: 100px;
+        }
+    }
+}
+
+/* ==========================================================================
+4. Token page
+========================================================================== */
+
+.token-wrapper {
+    background: url(../images/bg/bg-token-top.png) no-repeat top center,url(../images/bg/bg-token-left.png) no-repeat top left,url(../images/bg/bg-token-bottom.png) no-repeat bottom right,#1c004c;
+}
+
+.token-wrapper {
+    .token-image img {
+        height: 220px;
+    }
+    .is-ico-details {
+        .details-title {
+            color: $white;
+            padding: 5px 0;
+        }
+        ul {
+            li::before {
+                content: "- ";
+                color: $light-blue;
+            }
+            li {
+                font-size: .85rem;
+                color: $light-blue;
+            }
+        }
+    }
+    .ico-repartition {
+        height: 380px;
+    }
+    .repartition-details {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .repartition-block {
+            .color-dot {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                margin: 10px auto;
+                &.is-reward {
+                    @include secondary-gradient-top();
+                }
+                &.is-presale {
+                    @include primary-gradient-right();
+                }
+                &.is-sale {
+                    background: $primary-accent;
+                }
+            }
+            .share-title {
+                font-family: 'Cabin', sans-serif;
+                text-transform: uppercase;
+                color: rgba(94,147,255,.9);
+                padding: 5px 0;
+            }
+            .percentage {
+                font-family: 'Open Sans', sans-serif;
+                color: rgba(94,147,255,.9);
+            }
+        }
+    }
+    .currencies {
+        max-width: 500px;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+            color: $light-blue;
+            font-size: 2.2rem;
+            margin: 10px;
+        }
+    }
+    .token-documentation {
+        padding: 60px 40px;
+        transition: all .3s ease;
+        box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.2);
+        .documentation-title {
+            padding-bottom: 20px;
+            font-family: 'Cabin', sans-serif;
+            font-size: 1.8rem;
+            color: $white;
+        }
+        ul {
+            li {
+                padding: 10px 20px;
+                color: $white;
+                opacity: 0.4;
+                font-weight: 300;
+                border-left: 2px solid transparent;
+                transition: all .3s;
+                cursor: pointer;
+                &:hover {
+                    opacity: 0.8;
+                }
+                &.is-active {
+                    border-left: 2px solid $primary;
+                    color: $white;
+                    opacity: 1;
+                }
+            }
+        }
+        .document-block {
+            img {
+                height: 80px;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+5. ICO Page
+========================================================================== */
+
+.ico-countdown {
+    //Countdown card
+    .ico-card {
+        width: 100%;
+        @include primary-gradient-right();
+        color: $white;
+        padding: 20px 40px;
+        border-radius: 6px;
+        animation-delay: .3s;
+        //Progress bar
+        .progress-block {
+            .progress-tags {
+                display: flex;
+                padding: 20px 30px;
+                div {
+                    position: relative;
+                    text-align: right;
+                    font-family: 'Cabin', sans-serif;
+                    font-size: .65rem;
+                    text-transform: uppercase;
+                    &:before {
+                        content: '';
+                        height: 26px;
+                        width: 1px;
+                        background: $smoke-white;
+                        position: absolute;
+                        top: 25px;
+                        right: 0px;
+                        transform: translateX(50%);
+
+                    }
+                    &:first-child, &:nth-child(2) {
+                        flex-grow: 2;
+                    }
+                    &:nth-child(3) {
+                        flex-grow: 1;
+                    }
+                }
+            }
+            //Color
+            progress {
+                &.ico-progress {
+                    &::-webkit-progress-value {
+                        @include secondary-gradient-right();
+                    }
+                    &::-moz-progress-bar {
+                        @include secondary-gradient-right();
+                    }
+                    &::-ms-fill {
+                        @include secondary-gradient-right();
+                    }
+                }
+            }
+        }
+        //Button
+        .button-block {
+            text-align: center;
+            margin: 20px 0 10px 0;
+            padding: 0 15%;
+        }
+        //Icons
+        .icon-block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 0;
+            i {
+                margin: 0 5px;
+                color: $smoke-white;
+            }
+        }
+    }
+}
+
+.login-form {
+    padding: 0 40px;
+}
+
+
+/* ==========================================================================
+6. Roadmap page
+========================================================================== */
+
+.roadmap-wrapper {
+    background: url(../images/bg/bg-token-top.png) no-repeat top center,url(../images/bg/bg-token-left.png) no-repeat top left,url(../images/bg/bg-token-bottom.png) no-repeat bottom right,#1c004c;
+}
+
+.roadmap-wrapper {
+    .roadmap-image img {
+        height: 280px;
+    }
+    .main-timeline {
+        ul {
+            //background: #456990;
+            //padding: 20px 0;
+            padding-bottom: 50px;
+        }
+
+        ul li {
+            list-style-type: none;
+            position: relative;
+            width: 1px;
+            margin: 0 auto;
+            padding-top: 50px;
+            background: $light-blue;
+            -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,.5), 0 0 25px 0 rgba(18,60,255,.16);
+            box-shadow: 0 2px 3px 0 rgba(0,0,0,.5), 0 0 25px 0 rgba(18,60,255,.16);
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: -1px;
+                left: 50%;
+                width: 32px;
+                height: 32px;
+                border: 1px solid rgba(94,147,255,.9);
+                border-radius: 50%;
+                background: #1c004c;
+                transform: translateX(-50%);
+            }
+        }
+
+        ul li::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            transform: translateX(-50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $light-blue;
+        }
+
+        ul li div {
+            position: relative;
+            bottom: 0;
+            width: 400px;
+            border-radius: 1px;
+            padding: 20px;
+            color: $light-blue;
+            background: rgba(17,149,247,.08);
+            border: 1px solid rgba(0,83,251,.5);
+            -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,.5), 0 0 25px 0 rgba(18,60,255,.16);
+            box-shadow: 0 2px 3px 0 rgba(0,0,0,.5), 0 0 25px 0 rgba(18,60,255,.16);
+        }
+
+        ul li div::before {
+            content: '';
+            position: absolute;
+            bottom: 7px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-color: $light-blue;
+        }
+
+        ul li:nth-child(odd) div {
+            left: 45px;
+        }
+
+        ul li:nth-child(odd) div::before {
+            left: -8px;
+            border-width: 8px 8px 8px 0;
+            border-color: transparent rgba(0,83,251,.5) transparent transparent;
+        }
+
+        ul li:nth-child(even) div {
+            left: -439px;
+        }
+
+        ul li:nth-child(even) div::before {
+            right: -8px;
+            border-width: 8px 0 8px 8px;
+            border-color: transparent transparent transparent $light-blue;
+        }
+
+        time {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+
+        /* EFFECTS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+        ul li::after {
+            transition: background .5s ease-in-out;
+        }
+
+        ul li.in-view::after {
+            background: $light-blue;
+        }
+
+        ul li div {
+            visibility: hidden;
+            opacity: 0;
+            transition: all .5s ease-in-out;
+        }
+
+        ul li:nth-child(odd) div {
+            transform: translate3d(200px, 0, 0);
+        }
+
+        ul li:nth-child(even) div {
+            transform: translate3d(-200px, 0, 0);
+        }
+
+        ul li.in-view div {
+            transform: none;
+            visibility: visible;
+            opacity: 1;
+        }
+
+
+        /* GENERAL MEDIA QUERIES
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+        @media screen and (max-width: 900px) {
+            ul li div {
+                width: 250px;
+            }
+            ul li:nth-child(even) div {
+                left: -289px;
+                /*250+45-6*/
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            ul li {
+                margin-left: 20px;
+            }
+            ul li div {
+                width: calc(100vw - 91px);
+            }
+            ul li:nth-child(even) div {
+                left: 45px;
+            }
+            ul li:nth-child(even) div::before {
+                left: -15px;
+                border-width: 8px 16px 8px 0;
+                border-color: transparent #F45B69 transparent transparent;
+            }
         }
     }
 }

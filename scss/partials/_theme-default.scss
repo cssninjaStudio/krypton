@@ -82,8 +82,8 @@ $secondary-box-shadow:  0 14px 26px -12px $secondary-shadow-from, 0 4px 23px 0px
 
 @mixin secondary-gradient-top(){
     background: $secondary;
-    background: -webkit-linear-gradient(to top, $primary, $secondary-accent) !important;
-    background: linear-gradient(to top, $primary, $secondary-accent) !important; 
+    background: -webkit-linear-gradient(to top, $secondary, $secondary-accent) !important;
+    background: linear-gradient(to top, $secondary, $secondary-accent) !important; 
 }
 
 @mixin secondary-gradient-right(){

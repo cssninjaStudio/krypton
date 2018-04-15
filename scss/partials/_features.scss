@@ -76,6 +76,7 @@ TABLE OF CONTENTS
     p {
         font-family: 'Open Sans', sans-serif;
         font-size: .9rem;
+        opacity: 0.8;
     }
 }
 
@@ -100,6 +101,7 @@ TABLE OF CONTENTS
         //light modifier
         &.is-light {
             color: $white;
+            opacity: 0.8;
         }
         //light blue modifier
         &.is-light-blue {
@@ -191,7 +193,7 @@ TABLE OF CONTENTS
         width: 100%;
         @include primary-gradient-right();
         color: $white;
-        padding: 20px 40px;
+        padding: 30px 40px;
         border-radius: 6px;
         animation-delay: .3s;
         //Progress bar
