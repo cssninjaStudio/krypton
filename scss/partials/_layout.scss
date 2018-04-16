@@ -573,6 +573,10 @@ body {
         height: 280px;
     }
     .main-timeline {
+        outline: none !important;
+        &:active, &:focus {
+            outline: none !important;
+        }
         ul {
             //background: #456990;
             //padding: 20px 0;
@@ -585,7 +589,7 @@ body {
             width: 1px;
             margin: 0 auto;
             padding-top: 50px;
-            background: $light-blue;
+            background: rgba(0,83,251,.5);
             -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,.5), 0 0 25px 0 rgba(18,60,255,.16);
             box-shadow: 0 2px 3px 0 rgba(0,0,0,.5), 0 0 25px 0 rgba(18,60,255,.16);
             &:before {
@@ -595,7 +599,9 @@ body {
                 left: 50%;
                 width: 32px;
                 height: 32px;
-                border: 1px solid rgba(94,147,255,.9);
+                border: 1px solid rgba(0,83,251,.5);
+                -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,.5), 0 0 25px 0 rgba(18,60,255,.16);
+                box-shadow: 0 2px 3px 0 rgba(0,0,0,.5), 0 0 25px 0 rgba(18,60,255,.16);
                 border-radius: 50%;
                 background: #1c004c;
                 transform: translateX(-50%);
@@ -619,12 +625,49 @@ body {
             bottom: 0;
             width: 400px;
             border-radius: 1px;
-            padding: 20px;
+            padding: 30px;
             color: $light-blue;
             background: rgba(17,149,247,.08);
             border: 1px solid rgba(0,83,251,.5);
             -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,.5), 0 0 25px 0 rgba(18,60,255,.16);
             box-shadow: 0 2px 3px 0 rgba(0,0,0,.5), 0 0 25px 0 rgba(18,60,255,.16);
+            span {
+                display: block;
+                &.item-title {
+                    color: $white;
+                    font-family: 'Cabin', sans-serif;
+                    font-size: 1.2rem;
+                }
+                &.item-content {
+                    font-size: .9rem;
+                }
+                &.more {
+                    text-transform: uppercase;
+                    font-size: .8rem;
+                    padding-top: 20px;
+                    svg {
+                        stroke-width: 1.4px;
+                        width: 18px;
+                        height: 18px;
+                        position: relative;
+                        top: 2px;
+                    }
+                    a {
+                        transition: all .3s;
+                        font-family: 'Cabin', sans-serif;
+                        &:hover {
+                            color: $light-blue;
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+            time {
+                display: block;
+                font-size: .85rem;
+                font-weight: 500;
+                padding: 10px 0;
+            }
         }
 
         ul li div::before {
@@ -654,15 +697,10 @@ body {
         ul li:nth-child(even) div::before {
             right: -8px;
             border-width: 8px 0 8px 8px;
-            border-color: transparent transparent transparent $light-blue;
+            border-color: transparent transparent transparent rgba(0,83,251,.5);
         }
 
-        time {
-            display: block;
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
+
 
 
         /* EFFECTS
@@ -673,7 +711,7 @@ body {
         }
 
         ul li.in-view::after {
-            background: $light-blue;
+            background: rgba(0,83,251,.5);
         }
 
         ul li div {
@@ -721,10 +759,23 @@ body {
                 left: 45px;
             }
             ul li:nth-child(even) div::before {
-                left: -15px;
-                border-width: 8px 16px 8px 0;
-                border-color: transparent #F45B69 transparent transparent;
+                left: -8px;
+                border-width: 8px 8px 8px 0;
+                border-color: transparent rgba(0,83,251,.5) transparent transparent;
             }
         }
+    }
+}
+
+.roadmap-end {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    top: -50px;
+    left: 2px;
+    img {
+        height: 450px;
+        display: block;
+        margin: 0 auto;
     }
 }

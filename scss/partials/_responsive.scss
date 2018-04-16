@@ -139,6 +139,12 @@ TABLE OF CONTENTS
     .events-content {
         min-height: 386px;
     }
+    //Roadmap bottom image
+    .roadmap-end {
+        left: -100%;
+        transform: translateX(210px);
+        top: -86px;
+    }
 }
 
 
