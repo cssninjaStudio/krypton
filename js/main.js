@@ -46,6 +46,40 @@ $(document).ready(function() {
             }*/
         });
     }
+    
+    //Highlight current page navbar menu item
+    if ($('.navbar').length) {
+        // Get current page URL
+        var url = window.location.href;
+
+        // remove # from URL
+        url = url.substring(0, (url.indexOf("#") == -1) ? url.length : url.indexOf("#"));
+
+        // remove parameters from URL
+        url = url.substring(0, (url.indexOf("?") == -1) ? url.length : url.indexOf("?"));
+
+        // select file name
+        url = url.substr(url.lastIndexOf("/") + 1);
+
+        // If file name not available
+        if(url == ''){
+            url = 'index.html';
+        }
+
+        // Loop all menu items
+        $('.navbar .navbar-item a').each(function(){
+
+            // select href
+            var href = $(this).attr('href');
+
+            // Check filename
+            if(url == href){
+
+                // Add active class
+                $(this).addClass('is-active');
+            }
+        });
+    }
 
     //Pop Dropdowns
     $('.dropdown-trigger').on('click', function(event) {
@@ -146,7 +180,10 @@ $(document).ready(function() {
         }
     });
 
-
+    $('.like-button').on('click', function(){
+        $(this).toggleClass('is-active');
+        $('.like-button svg').toggleClass('gelatine');
+    })
 
     /* ---- particles.js config ---- */
 

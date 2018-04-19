@@ -67,7 +67,7 @@ TABLE OF CONTENTS
     img {
         display: block;
         margin: 0 auto;
-        max-height: 180px;
+        max-height: 120px;
     }
     h4 {
         margin-top: 10px;
@@ -91,10 +91,15 @@ TABLE OF CONTENTS
 
 //Feature content
 .side-feature-content {
+    .title {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
     //icon
     img {
-        max-height: 50px;
-        width: 50px;
+        max-height: 40px;
+        width: 40px;
     }
     //paragraph
     p {

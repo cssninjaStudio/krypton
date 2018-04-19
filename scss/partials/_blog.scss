@@ -111,6 +111,15 @@ TABLE OF CONTENTS
                     font-family: 'Cabin', sans-serif;
                     color: $white;
                     padding: 0 10px;
+                    span {
+                        display: block;
+                        &:nth-child(2) {
+                            color: $secondary;
+                            small {
+                                color: $white !important;
+                            }
+                        }
+                    }
                 }
             }
             //Comments and likes count
@@ -152,9 +161,86 @@ TABLE OF CONTENTS
     }
 }
 
+//
+.post-caption {
+    .author-block {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        img {
+            border-radius: 50%;
+        }
+        .author-name {
+            font-size: .75rem;
+            font-family: 'Cabin', sans-serif;
+            color: $white;
+            padding: 0 10px;
+            span {
+                display: block;
+                &:nth-child(2) {
+                    color: $secondary;
+                    small {
+                        color: $white !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//like button
+
+.like-button {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: -25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: $grey;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin: 0 auto;
+    text-decoration: none;
+    overflow: hidden;
+    .like-overlay {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        @include primary-gradient-right();
+        transform: scale(0);
+        transition: all .4s;
+        z-index: 0;
+    }
+    svg {
+        display: block;
+        stroke: $white;
+        position: relative;
+        transition: all .4s;
+        z-index: 1;
+    }
+    &.is-active {
+        .like-overlay {
+            transform: scale(1);
+        }
+        svg {
+            display: block;
+            stroke: $white;
+            fill: $white;
+            position: relative;
+            z-index: 1;
+        }
+    }
+}
+
 //Specific Media queries for blog posts
 @media screen and (max-width: 768px){
-    
+
     .blog-post {
         width: 92%;
         margin: auto;
