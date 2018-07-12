@@ -18,5 +18,19 @@ Krypton is developped with the impressive <a href="https://bulma.io">bulma.io</a
 * run `npm gulp build`
 * run `npm gulp default`
 
+## Issues
+
+If you've found an issue or a bug, you can report it in the issues section of this repository. Please try to follow these simple guidelines to report your issue:
+
+* Issue definition
+* Expected behaviour
+* Actual behaviour
+* steps to reproduce
+* Already tried fixes (if relevant)
+
+## More
+
+You can find more themes and ressources at  [Css Ninja Studio](https://cssninja.io).
+
 ## License
 This project is under the MIT license.
