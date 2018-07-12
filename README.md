@@ -1,8 +1,6 @@
-# Krypton - Free Bulma ICO / Crypto starter template 
+# Krypton - Free Bulma template 
 
-## Demo 
-
-Fresh is a one page landing page starter built by <a href="https://cssninja.io">Css Ninja</a>. Fresh is licensed under the MIT license.
+Krypton is an ICO / Crypto starter built by <a href="https://cssninja.io">Css Ninja</a>. Krypton is licensed under the MIT license.
 
 You can access the <a href="https://cssninjastudio.github.io/krypton/">Demo</a> by clicking on this <a href="https://cssninjastudio.github.io/krypton/">link</a>
 
