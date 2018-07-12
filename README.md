@@ -1,4 +1,5 @@
 # Krypton - Free Bulma template 
+![](https://cssninja.io/storage/app/media/external/krypton/krypton-preview.png)
 
 Krypton is an ICO / Crypto starter built by <a href="https://cssninja.io">Css Ninja</a>. Krypton is licensed under the MIT license.
 
