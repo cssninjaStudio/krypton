@@ -4,7 +4,11 @@
 
 Fresh is a one page landing page starter built by <a href="https://cssninja.io">Css Ninja</a>. Fresh is licensed under the MIT license.
 
-You can access the demo by clicking on this link
+You can access the <a href="https://cssninjastudio.github.io/krypton/">Demo</a> by clicking on this <a href="https://cssninjastudio.github.io/krypton/">link</a>
+
+## Bulma framework
+
+Krypton is developped with the impressive <a href="https://bulma.io">bulma.io</a> CSS framework.
 
 ## Get started
 
@@ -13,3 +17,6 @@ You can access the demo by clicking on this link
 * run `npm install`
 * run `npm gulp build`
 * run `npm gulp default`
+
+## License
+This project is under the MIT license.
