@@ -1,35 +1,35 @@
-# Krypton - Free Bulma template 
+# Krypton - Una plantilla libre de Bulma
 ![](https://cssninja.io/storage/app/media/external/krypton/krypton-preview.png)
 
-Krypton is an ICO / Crypto starter built by <a href="https://cssninja.io">Css Ninja</a>. Krypton is licensed under the MIT license.
+Krypton es un inicio para una ICO / Crypto realizado con <a href="https://cssninja.io">Css Ninja</a>. Krypton está construido bajo la licencia MIT.
 
-You can access the <a href="https://cssninjastudio.github.io/krypton/">Demo</a> by clicking on this <a href="https://cssninjastudio.github.io/krypton/">link</a>
+Puedes acceder a la <a href="https://cssninjastudio.github.io/krypton/">Demo</a> haciendo clic en este <a href="https://cssninjastudio.github.io/krypton/">enlace</a>
 
 ## Bulma framework
 
-Krypton is developped with the impressive <a href="https://bulma.io">bulma.io</a> CSS framework.
+Krypton est desarrollado con el sorprendente <a href="https://bulma.io">bulma.io</a> CSS framework.
 
-## Get started
+## Empezando
 
-* Open a terminal
-* Change directory to the root folder of this project
-* run `npm install`
-* run `npm gulp build`
-* run `npm gulp default`
+* Abre una terminal
+* Cambia al directorio raiz de este proyecto
+* Ejecuta `npm install`
+* Ejecuta `npm gulp build`
+* Ejecuta `npm gulp default`
 
-## Issues
+## Problemas
 
-If you've found an issue or a bug, you can report it in the issues section of this repository. Please try to follow these simple guidelines to report your issue:
+Si ha encontrado un problema o un fallo, puede reportarlo en la sección de problemas en este repositorio. Por favor, trate de seguir estos sencillos pasos para reportar el problema:
 
-* Issue definition
-* Expected behaviour
-* Actual behaviour
-* steps to reproduce
-* Already tried fixes (if relevant)
+* Definición del problema
+* Comportamiento esperado
+* Comportamiento actual
+* Pasos para reproducirlo
+* Correcciones ya probadas (si procede)
 
-## More
+## Más
 
-You can find more themes and ressources at  [Css Ninja Studio](https://cssninja.io).
+Puede encontrar más temas y recursos en  [Css Ninja Studio](https://cssninja.io).
 
-## License
-This project is under the MIT license.
+## Licencia
+Este proyecto está bajo la licencia del MIT.
