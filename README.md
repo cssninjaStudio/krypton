@@ -1,4 +1,4 @@
-# Krypton - Una plantilla libre de Bulma
+# Krypton - Una plantilla libre de Bulma (Old version)
 ![](https://cssninja.io/storage/app/media/external/krypton/krypton-preview.png)
 
 Krypton es un inicio para una ICO / Crypto realizado con <a href="https://cssninja.io">Css Ninja</a>. Krypton está construido bajo la licencia MIT.
