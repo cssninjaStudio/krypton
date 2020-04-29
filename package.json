@@ -49,7 +49,7 @@
   "dependencies": {
     "aos": "^2.2.0",
     "bulma": "^0.8.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "cryptofont": "^0.1.1",
     "feather-icons": "^4.7.0",
     "jquery-waypoints": "^2.0.5",
