@@ -1,0 +1,317 @@
+/*! _buttons.scss | Krypton | CSS Ninja */
+
+/* ==========================================================================
+Button styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Basic buttons
+1. Colored buttons
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Krypton button
+========================================================================== */
+
+//Base class
+.button {
+    //Krypton modifier
+    &.k-button {
+        min-width: 130px;
+        font-size: .75rem;
+        height: 40px;
+
+        //fat modifier
+        &.is-fat {
+            padding: 26px 40px !important;
+        }
+
+        //If the element is a button rather than a link
+        &.is-button {
+            line-height: 0;
+        }
+    }
+
+    //Hover raised modifier
+    &.raised:hover {
+        box-shadow: 0 14px 26px -12px rgba(0, 0, 0, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    //Uppercase button
+    &.upper-button {
+        text-transform: uppercase;
+    }
+
+    //Rounded buttons
+    &.rounded {
+        border-radius: 500px;
+    }
+
+    //Bold weight
+    &.is-bold {
+        font-weight: 500 !important;
+        text-transform: uppercase;
+        border-width: 2px;
+    }
+
+    //Slanted button
+    &.slanted {
+        transform: skewX(-18deg);
+        border: none !important;
+
+        .text {
+            transform: skewX(18deg);
+            position: relative;
+            display: block;
+            z-index: 3;
+        }
+    }
+
+    //Primary Krypton button
+    &.k-primary {
+        color: $white;
+
+        //Gradient modifier
+        &.has-gradient {
+            position: relative;
+            transition: all .6s ease-out !important;
+            border: none !important;
+
+            @include primary-gradient-top;
+
+            opacity: 1;
+            z-index: 0;
+
+            .text {
+                position: relative;
+                display: block;
+                z-index: 3;
+                opacity: 1 !important;
+            }
+
+            //Hover state
+            &:hover {
+                .front-gradient {
+                    opacity: 0;
+                }
+            }
+
+            //Gradient front element
+            .front-gradient {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                border-radius: 3px;
+
+                @include primary-gradient-right;
+
+                opacity: 1;
+                transition: all .6s ease-out !important;
+                z-index: 1;
+            }
+
+            //Rounded modifier
+            &.rounded {
+                .front-gradient {
+                    border-radius: 1000px;
+                }
+            }
+
+            //Raised modifier
+            &.raised {
+                &:hover {
+                    box-shadow: $primary-box-shadow !important;
+                    opacity: 0.95;
+                }
+            }
+
+            //Submit modifier
+            &.is-submit {
+                &:hover {
+                    transform: translateY(-10px);
+                }
+            }
+        }
+    }
+
+    //Secondary Krypton button
+    &.k-secondary {
+        color: $white;
+
+        //Gradient modifier
+        &.has-gradient {
+            position: relative;
+            transition: all .6s ease-out !important;
+            border: none !important;
+
+            @include secondary-gradient-right;
+
+            opacity: 1;
+            z-index: 0;
+
+            .text {
+                position: relative;
+                display: block;
+                z-index: 3;
+                opacity: 1 !important;
+            }
+
+            //Hover state
+            &:hover {
+                .front-gradient {
+                    opacity: 0;
+                }
+            }
+
+            //Gradient front element
+            .front-gradient {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                border-radius: 3px;
+
+                @include secondary-gradient-left;
+
+                opacity: 1;
+                transition: all .6s ease-out !important;
+                z-index: 1;
+            }
+
+            //Rounded modifier
+            &.rounded {
+                .front-gradient {
+                    border-radius: 1000px;
+                }
+            }
+
+            //Raised modifier
+            &.raised {
+                &:hover {
+                    box-shadow: $secondary-box-shadow !important;
+                    opacity: 0.95;
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+1. Colored Buttons
+========================================================================== */
+
+//primary button
+.button.primary-button {
+    outline: none;
+    border-color: $primary;
+    background-color: $primary;
+    color: $white;
+    transition: all 0.5s;
+
+    &:hover {
+        color: $white;
+    }
+
+    //raised state
+    &.raised:hover {
+        box-shadow: $primary-box-shadow;
+        opacity: 0.9 0.5;
+    }
+
+    //outlined button
+    &.btn-outlined {
+        border-color: $primary;
+        color: $primary !important;
+        background-color: transparent;
+
+        &:hover {
+            color: $white;
+            background-color: $primary;
+        }
+    }
+
+    &:focus {
+        border-color: $primary;
+    }
+}
+
+//secondary button
+.button.secondary-button {
+    outline: none;
+    border-color: $secondary;
+    background-color: $secondary;
+    color: $white;
+    transition: all 0.5s;
+
+    &:hover {
+        color: $white;
+    }
+
+    //raised state
+    &.raised:hover {
+        box-shadow: $secondary-box-shadow;
+        opacity: 0.95;
+    }
+
+    //outlined button
+    &.btn-outlined {
+        border-color: $secondary;
+        color: $secondary !important;
+        background-color: transparent;
+
+        &:hover {
+            color: $white !important;
+            background-color: $secondary;
+        }
+    }
+
+    &:focus {
+        border-color: $secondary;
+    }
+}
+
+//Grey button
+.button.grey-button {
+    outline: none;
+    border-color: $accent-grey;
+    background-color: $accent-grey;
+    color: $white;
+    transition: all 0.5s;
+
+    &:hover {
+        color: $white;
+    }
+
+    //raised state
+    &.raised:hover {
+        opacity: 0.8;
+    }
+
+    //outlined button
+    &.btn-outlined {
+        border-color: $accent-grey;
+        color: $accent-grey;
+        background-color: transparent;
+
+        &:hover {
+            color: $white;
+            background-color: $accent-grey;
+        }
+    }
+
+    &:focus {
+        border-color: $accent-grey;
+    }
+}

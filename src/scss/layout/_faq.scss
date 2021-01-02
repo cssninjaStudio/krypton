@@ -1,0 +1,96 @@
+/*! _faq.scss | Krypton | CSS Ninja */
+
+/* ==========================================================================
+FAQ section styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Accordion
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Accordion
+========================================================================== */
+
+.accordion {
+    margin: 3em auto;
+    max-width: 30em;
+
+    //toggle section
+    .accordion-toggle {
+        display: none;
+    }
+
+    //Clickable block
+    .accordion-option {
+        position: relative;
+        margin-bottom: 1em;
+        background: rgba(17, 149, 247, 0.08);
+        border: 1px solid rgba(0, 83, 251, 0.5);
+        -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5), 0 0 25px 0 rgba(18, 60, 255, 0.16);
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5), 0 0 25px 0 rgba(18, 60, 255, 0.16);
+
+        .accordion-title,
+        .accordion-content {
+            backface-visibility: hidden;
+            transform: translateZ(0);
+            transition: all 0.4s;
+        }
+
+        //Title
+        .accordion-title {
+            padding: 1em;
+            display: block;
+            color: $white;
+            font-family: 'Cabin', sans-serif;
+            font-weight: 500;
+            font-size: .9rem;
+            cursor: pointer;
+        }
+
+        .accordion-title:after, .accordion-title:before {
+            content: '';
+            position: absolute;
+            right: 1.25em;
+            top: 1.25em;
+            width: 2px;
+            height: 0.75em;
+
+            @include primary-gradient-right;
+
+            transition: all 0.2s;
+        }
+
+        .accordion-title:after {
+            transform: rotate(90deg);
+        }
+
+        //Content
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+
+            p {
+                margin: 0;
+                padding: 0.5em 1em 1em;
+                font-size: 0.9em;
+                line-height: 1.5;
+                color: rgba(94, 147, 255, 0.9);
+            }
+        }
+
+        //Behaviour
+        .accordion-toggle:checked {
+            & + .accordion-title + .accordion-content {
+                max-height: 500px;
+            }
+
+            & + .accordion-title:before {
+                transform: rotate(90deg) !important;
+            }
+        }
+    }
+}

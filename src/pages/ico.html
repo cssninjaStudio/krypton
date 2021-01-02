@@ -21,7 +21,7 @@ title: Home
             <div class="columns is-vcentered">
 
                 <!-- Landing page Title -->
-                <div class="column is-6 landing-caption">
+                <div class="column is-5 landing-caption">
                     <h1 class="title is-3 is-light is-semibold is-spaced main-title has-text-centered">Login to ICO</h1>
                     <form class="login-form">
                         <!-- Field -->
@@ -41,7 +41,7 @@ title: Home
                         
                         <!-- Submit -->
                         <div>
-                            <button class="button is-button k-button k-primary raised has-gradient is-bold">
+                            <button class="button is-button k-button k-primary raised has-gradient is-bold is-fullwidth">
                                 <span class="text">Login</span>
                                 <span class="front-gradient"></span>
                             </button>
@@ -50,24 +50,24 @@ title: Home
 
                 </div>
                 <!-- Hero image -->
-                <div class="column is-6 ico-countdown">
-                    <div class="ico-card animated preFadeInUp fadeInUp">
+                <div class="column is-5 is-offset-1 ico-countdown">
+                    <div x-data="initCountdown()" x-init="setupCountdown()" class="ico-card animated preFadeInUp fadeInUp">
                         <!-- Countdown -->
                         <ul id="countdown" class="is-ico">
                             <li id="days">
-                                <div class="timer-number">00</div>
+                                <div id="days-count" class="timer-number">00</div>
                                 <div class="label">Days</div>
                             </li>
                             <li id="hours">
-                                <div class="timer-number">00</div>
+                                <div id="hours-count" class="timer-number">00</div>
                                 <div class="label">Hours</div>
                             </li>
                             <li id="minutes">
-                                <div class="timer-number">00</div>
+                                <div id="minutes-count" class="timer-number">00</div>
                                 <div class="label">Minutes</div>
                             </li>
                             <li id="seconds">
-                                <div class="timer-number">00</div>
+                                <div id="seconds-count" class="timer-number">00</div>
                                 <div class="label">Seconds</div>
                             </li>
                         </ul>
@@ -108,9 +108,9 @@ title: Home
             <div class="tabs is-centered">
                 <!-- Client / partner list -->
                 <ul>
-                    <li><a><img class="hero-logo" src="assets/img/clients/cryptomarket.svg" alt=""></a></li>
-                    <li><a><img class="hero-logo" src="assets/img/clients/bitit.svg" alt=""></a></li>
-                    <li><a><img class="hero-logo" src="assets/img/clients/coin.svg" alt=""></a></li>
+                    <li><a><img class="hero-logo" src="/img/clients/cryptomarket.svg" alt=""></a></li>
+                    <li><a><img class="hero-logo" src="/img/clients/bitit.svg" alt=""></a></li>
+                    <li><a><img class="hero-logo" src="/img/clients/coin.svg" alt=""></a></li>
                 </ul>
             </div>
         </div>

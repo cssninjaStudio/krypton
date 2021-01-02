@@ -1,0 +1,211 @@
+/*! _footer.scss | Krypton | CSS Ninja */
+
+/* ==========================================================================
+Footer styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Krypton footer
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Krypton footer
+========================================================================== */
+
+.krypton-footer {
+    padding: 100px 40px;
+    background: #0f0330;
+    text-align: center;
+    position: relative;
+
+    //Solar system background
+    .solar-system {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 50%;
+        z-index: 0;
+    }
+
+    //Footer logo
+    .footer-logo {
+        img {
+            height: 75px;
+        }
+
+        //Brand
+        .brand-name {
+            font-family: 'Cabin', sans-serif;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: $white;
+            padding: 5px 0;
+            font-size: 1.4rem;
+            letter-spacing: 3px;
+        }
+
+        //Motto
+        .brand-subtitle {
+            font-family: 'Open Sans', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: .65rem;
+            color: $primary;
+        }
+    }
+
+    //Footer columns
+    .footer-columns {
+        padding: 40px 0;
+        position: relative;
+        z-index: 1;
+
+        //Subscribe form
+        .subscribe-block {
+            //Title
+            .subscribe-title {
+                padding: 10px 0;
+                font-family: 'Open Sans', sans-serif;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: .55rem;
+                color: $secondary;
+            }
+
+            //Form control
+            .control {
+                position: relative;
+                width: 100%;
+
+                //Input
+                .krypton-subscribe-input {
+                    height: 50px;
+                    width: 100%;
+                    background: rgba(17, 149, 247, 0.08);
+                    border: 1px solid rgba(0, 83, 251, 0.5);
+                    border-radius: 100px;
+                    -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5), 0 0 25px 0 rgba(18, 60, 255, 0.16);
+                    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5), 0 0 25px 0 rgba(18, 60, 255, 0.16);
+                    padding: 5px 130px 5px 30px;
+                    color: $white;
+                    transition: all .4s;
+
+                    &:focus, &:active {
+                        outline: none !important;
+                        border: 1px solid rgba(0, 83, 251, 0.8) !important;
+                        -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5), 0 0 25px 0 rgba(18, 60, 255, 0.26) !important;
+                        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5), 0 0 25px 0 rgba(18, 60, 255, 0.26) !important;
+                    }
+                }
+
+                //Button
+                button {
+                    display: block;
+                    position: absolute;
+                    right: 4px;
+                    top: 5px;
+                    color: $white;
+
+                    @include secondary-gradient-right;
+
+                    border: none;
+                    height: 40px;
+                    padding: 0 26px;
+                    text-transform: uppercase;
+                    font-family: 'Cabin', sans-serif;
+                    font-weight: 500;
+                    border-radius: 100px;
+                    cursor: pointer;
+                    transition: all .3s;
+
+                    &:focus, &:active {
+                        outline: none !important;
+                    }
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+
+        //Navigation links
+        .footer-links {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            //Link element
+            li {
+                a {
+                    position: relative;
+                    text-transform: uppercase;
+                    font-family: 'Cabin', sans-serif;
+                    font-weight: 500;
+                    font-size: .8rem;
+                    color: $white;
+                    padding: 10px 0;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        -webkit-transform-origin: right center;
+                        -ms-transform-origin: right center;
+                        transform-origin: right center;
+                        height: 2px;
+                        background: $secondary;
+                        background: -webkit-linear-gradient(to right, $secondary, $secondary-accent) !important;
+                        background: linear-gradient(to right, $secondary, $secondary-accent) !important;
+                        -webkit-transform: scale(0, 1);
+                        -ms-transform: scale(0, 1);
+                        transform: scale(0, 1);
+                        -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                        transition: -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                    }
+
+                    //Hover state
+                    &:hover {
+                        &:before {
+                            -webkit-transform-origin: left center;
+                            -ms-transform-origin: left center;
+                            transform-origin: left center;
+                            -webkit-transform: scale(1, 1);
+                            -ms-transform: scale(1, 1);
+                            transform: scale(1, 1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Copyright section
+    .k-copyright {
+        position: relative;
+        color: $primary;
+        font-family: 'Open Sans', sans-serif;
+        font-size: .85rem;
+        z-index: 2;
+    }
+
+    //Coded by section
+    .coded-by {
+        position: relative;
+        color: $white;
+        font-family: 'Open Sans', sans-serif;
+        font-size: .7rem;
+        z-index: 2;
+
+        a {
+            color: $secondary;
+        }
+    }
+}
