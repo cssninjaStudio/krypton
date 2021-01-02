@@ -1,7 +1,7 @@
 {
-  "name": "fresh",
+  "name": "krypton",
   "version": "4.0.0",
-  "description": "Fresh - Bulma + Alpine JS landing page",
+  "description": "Krypton - Bulma + Alpine JS ICO/Crypto Starter",
   "main": "gulpfile.js",
   "dependencies": {
     "@ryangjchandler/spruce": "^2.4.0",
