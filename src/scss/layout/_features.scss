@@ -1,0 +1,420 @@
+/*! _features.scss | Krypton | CSS Ninja */
+
+/* ==========================================================================
+Features elements styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Video pulsating button
+1. Icon box features
+2. Side features
+3. Flying tabs
+4. Countdown
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Video pulsating button
+========================================================================== */
+
+.video-button {
+    position: relative;
+    height: 54px;
+    width: 54px;
+
+    @include secondary-gradient-right;
+
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    cursor: pointer;
+
+    //Play icon
+    img {
+        position: relative;
+        display: block;
+        width: 24px;
+        height: 24px;
+        left: 2px;
+        z-index: 3;
+    }
+
+    //Pulsating pseudo element
+    &:after {
+        content: '';
+        position: absolute;
+        top: calc(50% - 12px);
+        left: calc(50% - 12px);
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+
+        @include secondary-gradient-right;
+
+        animation: pulse 1.6s infinite;
+        animation-duration: 2s;
+        transform-origin: center center;
+        z-index: 0;
+    }
+}
+
+/* ==========================================================================
+1. Icon box features
+========================================================================== */
+
+.feature {
+    text-align: center;
+
+    img {
+        display: block;
+        margin: 0 auto;
+        max-height: 120px;
+    }
+
+    h4 {
+        margin-top: 10px;
+        font-family: 'Cabin', sans-serif;
+    }
+
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: .9rem;
+        opacity: 0.8;
+    }
+}
+
+/* ==========================================================================
+2. Side features
+========================================================================== */
+
+//Featured image
+.side-feature {
+    max-height: 500px;
+}
+
+//Feature content
+.side-feature-content {
+    .title {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    //icon
+    img {
+        max-height: 40px;
+        width: 40px;
+    }
+
+    //paragraph
+    p {
+        //light modifier
+        &.is-light {
+            color: $white;
+            opacity: 0.8;
+        }
+
+        //light blue modifier
+        &.is-light-blue {
+            color: #d5ebff;
+        }
+    }
+
+    //title
+    h3 span {
+        padding: 0 10px;
+    }
+}
+
+/* ==========================================================================
+3. Flying tabs
+========================================================================== */
+
+//Container
+.flying-tabs-container {
+    max-width: 560px;
+    margin: 0 auto;
+
+    //tabs
+    .flying-tabs {
+        //tab-item
+        .flying-child {
+            display: inline;
+            text-align: center;
+            cursor: pointer;
+
+            &:hover a {
+                color: lighten(#1e004f, 15%);
+            }
+
+            &.is-active a {
+                color: $white !important;
+            }
+        }
+
+        //link element
+        a {
+            font-family: 'Cabin', sans-serif;
+            display: inline-block;
+            width: 24.4%;
+            padding: .75rem 0;
+            text-decoration: none;
+            color: #4700bc;
+            pointer-events: none;
+            transition: all .3s;
+        }
+
+        //Settings for underline
+        .tab-1.is-active {
+            margin: 0;
+        }
+
+        .tab-2.is-active ~ .slider {
+            margin-left: 25%;
+        }
+
+        .tab-3.is-active ~ .slider {
+            margin-left: 50%;
+        }
+
+        .tab-4.is-active ~ .slider {
+            margin-left: 75%;
+        }
+
+        //Flying underline
+        .slider {
+            height: 2px;
+            border-radius: 10px;
+            width: 25%;
+            margin: 0;
+
+            @include primary-gradient-top;
+
+            border: none;
+            transition: .3s ease-in-out;
+        }
+    }
+}
+
+//Tab content
+.tab-content {
+    display: none;
+    min-height: 312px;
+    margin-top: 40px;
+
+    //Active state
+    &.is-active {
+        display: block;
+    }
+
+    //Side image
+    img {
+        height: 320px;
+        animation-delay: .3s;
+    }
+
+    //Countdown card
+    .ico-card {
+        width: 100%;
+
+        @include primary-gradient-right;
+
+        color: $white;
+        padding: 30px 40px;
+        border-radius: 6px;
+        animation-delay: .3s;
+
+        //Progress bar
+        .progress-block {
+            .progress-tags {
+                display: flex;
+                padding: 20px 30px;
+
+                div {
+                    position: relative;
+                    text-align: right;
+                    font-family: 'Cabin', sans-serif;
+                    font-size: .65rem;
+                    text-transform: uppercase;
+
+                    &:before {
+                        content: '';
+                        height: 26px;
+                        width: 1px;
+                        background: $smoke-white;
+                        position: absolute;
+                        top: 25px;
+                        right: 0px;
+                        transform: translateX(50%);
+                    }
+
+                    &:first-child, &:nth-child(2) {
+                        flex-grow: 2;
+                    }
+
+                    &:nth-child(3) {
+                        flex-grow: 1;
+                    }
+                }
+            }
+
+            //Color
+            progress {
+                &.ico-progress {
+                    &::-webkit-progress-value {
+                        @include secondary-gradient-right;
+                    }
+
+                    &::-moz-progress-bar {
+                        @include secondary-gradient-right;
+                    }
+
+                    &::-ms-fill {
+                        @include secondary-gradient-right;
+                    }
+                }
+            }
+        }
+
+        //Button
+        .button-block {
+            text-align: center;
+            margin: 20px 0 10px 0;
+            padding: 0 15%;
+        }
+
+        //Icons
+        .icon-block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 0;
+
+            i {
+                margin: 0 5px;
+                color: $smoke-white;
+            }
+        }
+    }
+
+    //Text content
+    .text-content {
+        p {
+            animation-delay: .15s;
+        }
+
+        //Bullet list
+        .custom-bullet-list {
+            li::before {
+                content: "೦ ";
+                color: $secondary;
+            }
+
+            li {
+                padding: 10px 0;
+                color: $white;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 300;
+
+                &:first-child {
+                    animation-delay: .15s;
+                }
+
+                &:nth-child(2) {
+                    animation-delay: .2s;
+                }
+
+                &:nth-child(3) {
+                    animation-delay: .25s;
+                }
+
+                span {
+                    &:first-child {
+                        font-family: 'Cabin', sans-serif;
+                    }
+
+                    &.item-content {
+                        margin: 0 16px !important;
+                        font-size: 90%;
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight: 300;
+                        color: #e8e8e8;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+4. Countdown
+========================================================================== */
+
+ul#countdown {
+    position: relative;
+    display: flex;
+    margin: 10px auto;
+    padding: 0;
+    color: #fff;
+    border-width: 1px 0;
+    overflow: hidden;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+
+    //Left pulled
+    &.is-pulled-left {
+        left: -10%;
+    }
+
+    //Modified for ICO card
+    &.is-ico {
+        .label {
+            color: #f9f9f9;
+            font-size: 10px;
+        }
+    }
+
+    //Numbers
+    .number {
+        background-color: none !important;
+    }
+
+    //List element
+    li {
+        position: relative;
+        margin: 0 -3px 0 0;
+        padding: 0;
+        display: inline-block;
+        width: 25%;
+        font-size: 26px;
+        text-align: center;
+
+        //semicolumn pseudo element
+        &:after {
+            content: ':';
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        //Removing semicolumn for last element
+        &:last-child {
+            &:after {
+                content: '';
+            }
+        }
+
+        //Label
+        .label {
+            color: #adafb2;
+            font-size: 12px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+}

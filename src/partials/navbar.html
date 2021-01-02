@@ -1,21 +1,36 @@
 <!-- Static navbar -->
-<nav class="navbar is-light">
+<nav x-data="initNavbar()" class="navbar is-light" :class="{
+        'is-dark-mobile': mobileOpen,
+        '': !mobileOpen
+    }">
     <div class="container">
         <!-- Brand -->
         <div class="navbar-brand">
             <a href="index.html" class="navbar-item">
-                <img class="rotating" src="assets/img/logo/krypton.svg" alt="">
+                <img class="rotating" src="/img/logo/krypton.svg" alt="">
                 <span class="brand-name">Krypton</span>
             </a>
             <!-- Responsive toggle -->
-            <span class="navbar-burger burger" data-target="navbarMenu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </span>
+            <div class="navbar-burger" @click="openMobileMenu()">
+                <div class="menu-toggle">
+                    <span class="icon-box-toggle" :class="{
+                            'active': mobileOpen,
+                            '': !mobileOpen
+                        }">
+                        <span class="rotate">
+                            <i class="icon-line-top"></i>
+                            <i class="icon-line-center"></i>
+                            <i class="icon-line-bottom"></i>
+                        </span>
+                    </span>
+                </div>
+            </div>
         </div>
         <!-- Menu -->
-        <div id="navbarMenu" class="navbar-menu light-menu">
+        <div id="navbarMenu" class="navbar-menu light-menu" :class="{
+                'is-active': mobileOpen,
+                '': !mobileOpen
+            }">
             <div class="navbar-end">
                 <!-- Menu item -->
                 <div class="navbar-item is-nav-link">
@@ -36,7 +51,7 @@
                 <!-- Menu item -->
                 <div class="navbar-item is-nav-link">
                     <a class="is-centered-responsive" href="#" target="_blank">
-                        <img class="telegram" src="assets/img/logo/telegram.svg" alt="">
+                        <img class="telegram" src="/img/logo/telegram.svg" alt="">
                         Telegram
                     </a>
                 </div>

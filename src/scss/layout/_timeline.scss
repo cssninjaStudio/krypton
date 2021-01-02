@@ -1,0 +1,511 @@
+/*! _theme-default.scss | Krypton | Kit1 | CSS Ninja */
+
+/* ==========================================================================
+Default theme variables 
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Variables
+1. Shadow variables
+2. Gradient mixins
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Landing page timeline
+========================================================================== */
+
+//Timeline wrapper
+.krypton-timeline {
+    opacity: 0;
+    margin: 0 auto;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+
+    &:before {
+        //ever visible, this is used in jQuery to check the current media screen
+        content: 'mobile';
+        display: none;
+    }
+
+    &.loaded {
+        // show the timeline after events position has been set (using JavaScript)
+        opacity: 1;
+    }
+
+    .timeline {
+        position: relative;
+        height: 100px;
+        width: 90%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    //Controls
+    .events-wrapper {
+        position: relative;
+        height: 100%;
+        margin: 0 40px;
+        overflow: hidden;
+
+        &:after, &:before {
+            content: '';
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            height: 100%;
+            width: 20px;
+        }
+
+        &:before {
+            left: 0;
+        }
+
+        &:after {
+            right: 0;
+        }
+    }
+
+    .events {
+        //Grey line/timeline
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 49px;
+        height: 2px;
+
+        //Width is set using JavaScript
+        background: #dfdfdf;
+        -webkit-transition: -webkit-transform 0.4s;
+        -moz-transition: -moz-transform 0.4s;
+        transition: transform 0.4s;
+
+        a {
+            position: absolute;
+            width: 55px;
+            bottom: 0;
+            z-index: 2;
+            text-align: center;
+            font-size: .75rem;
+            font-family: 'Cabin', sans-serif;
+            padding-bottom: 15px;
+
+            //Fix for issue on Safari - text flickering while timeline translates
+            -webkit-transform: translateZ(0);
+            -moz-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            -o-transform: translateZ(0);
+            transform: translateZ(0);
+            background: $primary;
+            background: -webkit-linear-gradient(to right, $primary, $primary-accent) !important;
+            background: linear-gradient(to right, $primary, $primary-accent) !important;
+            color: $white;
+            border-radius: 3px;
+            padding: 5px;
+            margin-bottom: 20px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: 20px;
+                background: $secondary;
+                background: -webkit-linear-gradient(to right, $secondary, $secondary-accent) !important;
+                background: linear-gradient(to right, $secondary, $secondary-accent) !important;
+                bottom: -20px;
+                left: 50%;
+            }
+
+            &:after {
+                //Event dot
+                content: '';
+                position: absolute;
+                left: 50%;
+                right: auto;
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                -o-transform: translateX(-50%);
+                transform: translateX(-50%);
+                bottom: -25px;
+                height: 12px;
+                width: 12px;
+                border-radius: 50%;
+                border: 2px solid #dfdfdf;
+                background-color: #f8f8f8;
+                -webkit-transition: background-color 0.3s, border-color 0.3s;
+                -moz-transition: background-color 0.3s, border-color 0.3s;
+                transition: background-color 0.3s, border-color 0.3s;
+            }
+
+            //Selected state
+            &.selected {
+                pointer-events: none;
+
+                &:after {
+                    background: $secondary;
+                    background: -webkit-linear-gradient(to right, $secondary, $secondary-accent) !important;
+                    background: linear-gradient(to right, $secondary, $secondary-accent) !important;
+                    border-color: $secondary;
+                }
+            }
+
+            //Old state
+            &.older-event {
+                &:after {
+                    border-color: $secondary;
+                }
+            }
+        }
+    }
+
+    .filling-line {
+        //Green line filling the timeline
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: $secondary;
+        background: -webkit-linear-gradient(to right, $secondary, $secondary-accent) !important;
+        background: linear-gradient(to right, $secondary, $secondary-accent) !important;
+        -webkit-transform: scaleX(0);
+        -moz-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+        -o-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transform-origin: left center;
+        -moz-transform-origin: left center;
+        -ms-transform-origin: left center;
+        -o-transform-origin: left center;
+        transform-origin: left center;
+        -webkit-transition: -webkit-transform 0.3s;
+        -moz-transition: -moz-transform 0.3s;
+        transition: transform 0.3s;
+    }
+}
+
+//Timeline content
+.events-content {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    overflow: hidden;
+    -webkit-transition: height 0.4s;
+    -moz-transition: height 0.4s;
+    transition: height 0.4s;
+
+    //List
+    ol {
+        list-style-type: none;
+    }
+
+    //List item
+    li {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        left: 0;
+        top: 0;
+        max-width: 700px;
+        margin: 0 auto;
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+        transform: translateX(-100%);
+        padding: 40px;
+        background: rgba(39, 0, 104, 0.4);
+        border-radius: 4px;
+        color: $white;
+        opacity: 0;
+        -webkit-animation-duration: 0.4s;
+        -moz-animation-duration: 0.4s;
+        animation-duration: 0.4s;
+        -webkit-animation-timing-function: ease-in-out;
+        -moz-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+
+        &.selected {
+            //Visible event content
+            position: relative;
+            z-index: 2;
+            opacity: 1;
+            -webkit-transform: translateX(0);
+            -moz-transform: translateX(0);
+            -ms-transform: translateX(0);
+            -o-transform: translateX(0);
+            transform: translateX(0);
+        }
+
+        //Transitions
+        &.enter-right, &.leave-right {
+            -webkit-animation-name: cd-enter-right;
+            -moz-animation-name: cd-enter-right;
+            animation-name: cd-enter-right;
+        }
+
+        &.enter-left, &.leave-left {
+            -webkit-animation-name: cd-enter-left;
+            -moz-animation-name: cd-enter-left;
+            animation-name: cd-enter-left;
+        }
+
+        &.leave-right, &.leave-left {
+            -webkit-animation-direction: reverse;
+            -moz-animation-direction: reverse;
+            animation-direction: reverse;
+        }
+
+        > * {
+            margin: 0 auto;
+        }
+
+        //Title
+        .title-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            img {
+                height: 60px;
+                display: block;
+            }
+
+            div {
+                padding: 0 10px;
+            }
+        }
+
+        .event-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            font-family: 'Cabin', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        //Textual content
+        small, p {
+            line-height: 1.6;
+        }
+
+        small {
+            display: block;
+            font-size: .75rem;
+            margin: 5px auto;
+        }
+
+        p {
+            font-size: .9rem;
+            color: rgba(94, 147, 255, 0.9);
+        }
+    }
+}
+
+//Timeline Navigation
+.timeline-navigation {
+    a {
+        //Left and right arrows
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        bottom: auto;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        height: 34px;
+        width: 34px;
+        border-radius: 50%;
+        border: 2px solid #dfdfdf;
+
+        //Icon
+        overflow: hidden;
+        color: transparent;
+        text-indent: 100%;
+        white-space: nowrap;
+        -webkit-transition: border-color 0.3s;
+        -moz-transition: border-color 0.3s;
+        transition: border-color 0.3s;
+
+        &:after {
+            //Arrow icon
+            content: '';
+            color: #fff;
+            position: absolute;
+            height: 23px;
+            width: 26px;
+            left: 50%;
+            top: 50%;
+            bottom: auto;
+            right: auto;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -o-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        //Previous button
+        &.prev {
+            left: 0;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            background: url(../img/icons/chevron-left.svg) no-repeat 0 0;
+        }
+
+        //Next button
+        &.next {
+            right: 0;
+            background: url(../img/icons/chevron-right.svg) no-repeat 0 0;
+        }
+
+        //Inactive state
+        &.inactive {
+            cursor: default;
+
+            &:after {
+                background-position: 0 -16px;
+            }
+        }
+    }
+}
+
+//No touch settings
+.no-touch {
+    .krypton-timeline .events a:hover::after {
+        background-color: #7b9d6f;
+        border-color: #7b9d6f;
+    }
+
+    .timeline-navigation a:hover {
+        border-color: #7b9d6f;
+    }
+
+    .timeline-navigation a.inactive:hover {
+        border-color: #dfdfdf;
+    }
+}
+
+//Desktop media queries
+@media only screen and (min-width: 1100px) {
+    .krypton-timeline {
+        margin: 40px auto;
+
+        &:before {
+            content: 'desktop';
+        }
+    }
+}
+
+//Mobile media queries
+/*@media only screen and (min-width: 768px) {
+    .krypton-timeline .events-content h2 {
+        font-size: 7rem;
+    }
+    .krypton-timeline .events-content em {
+        font-size: 2rem;
+    }
+    .krypton-timeline .events-content p {
+        font-size: 1.8rem;
+    }
+}*/
+
+//Keyframes enter from right
+@-webkit-keyframes cd-enter-right {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+    }
+}
+
+@-moz-keyframes cd-enter-right {
+    0% {
+        opacity: 0;
+        -moz-transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        -moz-transform: translateX(0%);
+    }
+}
+
+@keyframes cd-enter-right {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+}
+
+//Keyframes enter from left
+@-webkit-keyframes cd-enter-left {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+    }
+}
+
+@-moz-keyframes cd-enter-left {
+    0% {
+        opacity: 0;
+        -moz-transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        -moz-transform: translateX(0%);
+    }
+}
+
+@keyframes cd-enter-left {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+}

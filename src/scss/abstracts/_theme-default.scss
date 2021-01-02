@@ -1,0 +1,99 @@
+/*! _theme-default.scss | Krypton | Kit1 | CSS Ninja */
+
+/* ==========================================================================
+Default theme variables 
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Variables
+1. Shadow variables
+2. Gradient mixins
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Color Variables
+========================================================================== */
+
+$fullhd-enabled: false;
+
+$primary: #7F00FF;
+$primary-accent: #3f00fc;
+$secondary: #00ff99;
+$secondary-accent: #33ccff;
+
+/* ==========================================================================
+1. Shadow variables
+========================================================================== */
+
+//Base shadow
+$base-shadow: rgba(0, 0, 0, 0.12);
+
+//Primary box shadow
+$primary-shadow-from: rgba(127, 0, 255, 0.42);
+$primary-shadow-to: rgba(63, 0, 252, 0.2);
+$primary-box-shadow: 0 14px 26px -12px $primary-shadow-from, 0 4px 23px 0px $base-shadow, 0 8px 10px -5px $primary-shadow-to !important;
+
+//Secondary box shadow
+$secondary-shadow-from: rgba(0, 255, 153, 0.42);
+$secondary-shadow-to: rgba(51, 204, 255, 0.2);
+$secondary-box-shadow: 0 14px 26px -12px $secondary-shadow-from, 0 4px 23px 0px $base-shadow, 0 8px 10px -5px $secondary-shadow-to !important;
+
+.primary-gradient {
+    background: $primary;
+    background: -webkit-linear-gradient(to right, $primary, $primary-accent) !important;
+    background: linear-gradient(to right, $primary, $primary-accent) !important;
+}
+
+.secondary-gradient {
+    background: $secondary;
+    background: -webkit-linear-gradient(to right, $secondary, $secondary-accent) !important;
+    background: linear-gradient(to right, $secondary, $secondary-accent) !important;
+}
+
+/* ==========================================================================
+2. Gradient mixins
+========================================================================== */
+
+@mixin theme-hero-gradient {
+    background-image: -webkit-linear-gradient(to bottom, #5202d8 0%, #3c019e 100%);
+    background-image: linear-gradient(to bottom, #5202d8 0%, #3c019e 100%);
+}
+
+@mixin primary-gradient-top {
+    background: $primary;
+    background: -webkit-linear-gradient(to top, $primary, $primary-accent) !important;
+    background: linear-gradient(to top, $primary, $primary-accent) !important;
+}
+
+@mixin primary-gradient-left {
+    background: $primary;
+    background: -webkit-linear-gradient(to left, $primary, $primary-accent) !important;
+    background: linear-gradient(to left, $primary, $primary-accent) !important;
+}
+
+@mixin primary-gradient-right {
+    background: $primary;
+    background: -webkit-linear-gradient(to right, $primary, $primary-accent) !important;
+    background: linear-gradient(to right, $primary, $primary-accent) !important;
+}
+
+@mixin secondary-gradient-top {
+    background: $secondary;
+    background: -webkit-linear-gradient(to top, $secondary, $secondary-accent) !important;
+    background: linear-gradient(to top, $secondary, $secondary-accent) !important;
+}
+
+@mixin secondary-gradient-right {
+    background: $secondary;
+    background: -webkit-linear-gradient(to right, $secondary, $secondary-accent) !important;
+    background: linear-gradient(to right, $secondary, $secondary-accent) !important;
+}
+
+@mixin secondary-gradient-left {
+    background: $secondary;
+    background: -webkit-linear-gradient(to left, $secondary, $secondary-accent) !important;
+    background: linear-gradient(to left, $secondary, $secondary-accent) !important;
+}

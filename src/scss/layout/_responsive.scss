@@ -1,0 +1,200 @@
+/*! _responsive.scss | Krypton | CSS Ninja */
+
+/* ==========================================================================
+Responsive styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Tablet Landscape
+1. Tablet Portrait
+2. Mobile
+3. Mixed Mobile / Tablet Portrait
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Tablet Landscape
+========================================================================== */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+
+/* ==========================================================================
+1. Tablet Portrait
+========================================================================== */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    //Navbar
+    .navbar {
+        .navbar-item {
+            &.is-nav-link {
+                text-align: center !important;
+            }
+        }
+
+        .button.slanted {
+            width: 100% !important;
+        }
+
+        .navbar-menu.is-active {
+            &.light-menu {
+                background: #2d0275 !important;
+            }
+        }
+
+        &.is-light.is-dark-mobile {
+            background: #2d0275 !important;
+        }
+    }
+
+    .landing-caption {
+        padding: 0 10%;
+
+        .divider {
+            margin: 0 auto;
+        }
+
+        h1, h2, p {
+            text-align: center !important;
+        }
+
+        h1 {
+            padding: 0 10%;
+        }
+    }
+
+    //features
+    .feature p {
+        padding: 0 25%;
+    }
+
+    //Side features
+    .side-feature-content {
+        text-align: center;
+
+        img {
+            display: block;
+            margin: 10px auto;
+        }
+
+        .divider {
+            margin: 0 auto;
+        }
+
+        p {
+            padding: 0 12%;
+        }
+    }
+
+    //tabs
+    .flying-wrapper {
+        ul {
+            .item-content {
+                font-size: 80% !important;
+            }
+        }
+    }
+
+    //team
+    .team-member-container {
+        margin: 0 25%;
+    }
+}
+
+/* ==========================================================================
+2. Mobile
+========================================================================== */
+
+@media (max-width: 767px) {
+    //Navbar
+    .navbar {
+        .navbar-item {
+            &.is-nav-link {
+                text-align: center !important;
+            }
+        }
+
+        .button.slanted {
+            width: 100% !important;
+        }
+
+        .navbar-menu.is-active {
+            &.light-menu {
+                background: #2d0275 !important;
+            }
+        }
+
+        &.is-light.is-dark-mobile {
+            background: #2d0275 !important;
+        }
+    }
+
+    //Lanfing page hero
+    .landing-caption {
+        .divider {
+            margin: 0 auto;
+        }
+
+        h1, h2, p {
+            text-align: center !important;
+        }
+
+        h1 {
+            font-size: 2.2rem !important;
+        }
+
+        h2 {
+            font-size: 1.05rem !important;
+        }
+    }
+
+    //features
+    .side-feature-content {
+        text-align: center;
+
+        img {
+            display: block;
+            margin: 10px auto;
+        }
+
+        .divider {
+            margin: 0 auto;
+        }
+    }
+
+    //tabs
+    .flying-wrapper {
+        ul {
+            a {
+                width: 23.8% !important;
+            }
+
+            .item-content {
+                font-size: 80% !important;
+            }
+        }
+    }
+
+    .ico-card {
+        padding: 20px 30px !important;
+    }
+
+    //events
+    .events-content {
+        min-height: 386px;
+    }
+
+    //Roadmap bottom image
+    .roadmap-end {
+        left: -100%;
+        transform: translateX(210px);
+        top: -86px;
+    }
+}
+
+/* ==========================================================================
+3. Mixed Mobile / Tablet Portrait
+========================================================================== */
+
+@media (max-width: 768px) {}
