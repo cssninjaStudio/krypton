@@ -1,4 +1,5 @@
-$level-item-spacing: ($block-spacing / 2) !default
+@use "sass:math"
+$level-item-spacing: math.div($block-spacing, 2) !default
 
 .level
   @extend %block
