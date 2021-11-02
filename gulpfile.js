@@ -91,6 +91,19 @@ function compileHTML() {
     .pipe(browserSync.stream());
 }
 
+//Concat JS
+function concatJs() {
+  console.log("\n\t" + logSymbols.info, "Compiling Vendor Js..\n");
+  return src([
+    'src/vendor/js/*',
+  ])
+    .pipe(sourcemaps.init())
+    .pipe(concat('app.js'))
+    .pipe(sourcemaps.write('./'))
+    .pipe(dest('dist/js'))
+    .pipe(browserSync.stream());
+}
+
 //Concat CSS Plugins
 function concatCssPlugins() {
   console.log("\n\t" + logSymbols.info, "Compiling Plugin styles..\n");
@@ -184,8 +197,25 @@ function devClean() {
   return del([options.paths.dist.base]);
 }
 
+const buildTasks = [
+  devClean, // Clean Dist Folder
+  resetPages,
+  parallel(
+    concatJs, 
+    concatCssPlugins, 
+    copyFonts, 
+    compileSCSS, 
+    javascriptBuild, 
+    devImages, 
+    compileHTML
+  ),
+]
 
 exports.setup = series(setupBulma);
+
+exports.prod = series(
+  ...buildTasks
+);
 
 exports.default = series(
   devClean, // Clean Dist Folder
@@ -194,3 +224,4 @@ exports.default = series(
   livePreview, // Live Preview Build
   watchFiles // Watch for Live Changes
 );
+
