@@ -3,7 +3,6 @@ import gulp from "gulp";
 import gulpSass from "gulp-sass";
 import concat from "gulp-concat";
 import imagemin from "gulp-imagemin";
-import purgecss from "gulp-purgecss";
 import sourcemaps from "gulp-sourcemaps";
 import autoprefixer from "gulp-autoprefixer";
 import panini from "panini";
@@ -45,11 +44,6 @@ function compileSCSS() {
         sourceMap: "scss",
         // includePaths: bourbon,
       }).on("error", sass.logError)
-    )
-    .pipe(
-      purgecss({
-        content: [`${options.paths.src.base}/**/*.html`],
-      })
     )
     .pipe(autoprefixer("last 2 versions"))
     .pipe(dest("dist/css"))
@@ -97,11 +91,6 @@ function concatCssPlugins() {
   ])
     .pipe(sourcemaps.init())
     .pipe(concat("app.css"))
-    .pipe(
-      purgecss({
-        content: [`${options.paths.src.base}/**/*.html`],
-      })
-    )
     .pipe(sourcemaps.write("./"))
     .pipe(dest("dist/css"))
     .pipe(browserSync.stream());
