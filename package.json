@@ -23,11 +23,15 @@
   "node": "^12.20.0 || ^14.13.1 || >=16.0.0",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "setup": "gulp setup"
   },
   "dependencies": {
-    "@ryangjchandler/spruce": "2.7.1",
-    "alpinejs": "2.8.2",
+    "@alpinejs/intersect": "^3.4.0",
+    "@alpinejs/persist": "^3.4.0",
+    "@ryangjchandler/fern": "^0.1.0",
+    "alpinejs": "^3.3.2",
+    "bulma": "^0.9.3",
     "aos": "3.0.0-beta.6",
     "codemirror": "5.64.0",
     "feather-icons": "4.28.0",

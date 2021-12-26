@@ -6,7 +6,6 @@ import imagemin from "gulp-imagemin";
 import sourcemaps from "gulp-sourcemaps";
 import autoprefixer from "gulp-autoprefixer";
 import panini from "panini";
-
 import sassCompiler from "sass";
 import del from "del";
 import browserify from "browserify";
@@ -31,6 +30,14 @@ function livePreview(done) {
     port: options.config.port || 5000,
   });
   done();
+}
+
+//Copy latest installed Bulma
+function setupBulma() {
+  console.log("\n\t" + logSymbols.info, "Installing Bulma Files..\n");
+  return src([nodepath + "bulma/*.sass", nodepath + "bulma/**/*.sass"]).pipe(
+    dest("src/sass/")
+  );
 }
 
 //Compile Scss code
@@ -194,4 +201,8 @@ export default (done) => {
     parallel(livePreview, watchFiles)
   )();
   done();
+};
+
+export const setup = () => {
+  series(setupBulma);
 };
