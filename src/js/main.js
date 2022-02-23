@@ -1,41 +1,38 @@
 "use strict";
 
-import './store/store';
-import 'alpinejs';
-import { env } from './libs/utils/constants';
-import { initPageLoader } from './libs/components/pageloader';
-import { switchDemoImages, insertBgImages } from './libs/utils/utils';
-import { initNavbar } from './libs/components/navbar';
-import { initHero } from './libs/components/hero';
-import { initTabs } from './libs/components/tabs';
-import { initCountdown } from './libs/components/countdown';
-import { initRoadmap } from './libs/components/roadmap';
-import { initLike } from './libs/components/like';
-import { initBackToTop } from './libs/components/backtotop';
-const feather = require('feather-icons');
+const feather = require("feather-icons");
 
-window.initNavbar = initNavbar;
-window.initHero = initHero;
-window.initTabs = initTabs;
-window.initCountdown = initCountdown;
-window.initRoadmap = initRoadmap;
-window.initLike = initLike;
-window.initBackToTop = initBackToTop;
+//Alpine JS and plugins import
+import Alpine from "alpinejs";
+import intersect from "@alpinejs/intersect";
+import Fern from "@ryangjchandler/fern";
+
+window.Alpine = Alpine;
+//Init intersect plugin
+Alpine.plugin(intersect);
+//Init Fern plugin
+Alpine.plugin(Fern);
+//Init Fern persisted store
+Alpine.persistedStore("app", {
+  isSiderbarOpen: false,
+});
+//Start Alpine JS
+Alpine.start();
+
+import { initPageLoader } from './libs/components/pageloader/pageloader';
+import './libs/components'
 
 const showPageloader = initPageLoader();
 
 document.onreadystatechange = function () {
-    if (document.readyState == 'complete') {
+  if (document.readyState == "complete") {
+    //Switch demo images
+    const changeImages = switchDemoImages(env);
 
-        //Switch demo images
-        const changeImages = switchDemoImages(env);
+    //Switch backgrounds
+    const changeBackgrounds = insertBgImages();
 
-        //Switch backgrounds
-        const changeBackgrounds = insertBgImages();
-
-        //Feather Icons
-        const featherIcons = feather.replace();
-        
-    }
-}
-
+    //Feather Icons
+    const featherIcons = feather.replace();
+  }
+};

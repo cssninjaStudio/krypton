@@ -23,11 +23,15 @@
   "node": "^12.20.0 || ^14.13.1 || >=16.0.0",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "setup": "gulp setup"
   },
   "dependencies": {
-    "@ryangjchandler/spruce": "2.7.1",
-    "alpinejs": "2.8.2",
+    "@alpinejs/intersect": "^3.9.0",
+    "@alpinejs/persist": "^3.7.1",
+    "@ryangjchandler/fern": "^0.1.0",
+    "alpinejs": "^3.9.0",
+    "bulma": "^0.9.3",
     "aos": "3.0.0-beta.6",
     "codemirror": "5.64.0",
     "feather-icons": "4.28.0",
@@ -36,7 +40,7 @@
     "notyf": "3.10.0",
     "plyr": "3.6.9",
     "postcss": "8.3.11",
-    "simplebar": "5.3.6"
+    "simplebar": "5.3.3"
   },
   "devDependencies": {
     "@babel/cli": "7.16.0",
