@@ -27,10 +27,10 @@
     "setup": "gulp setup"
   },
   "dependencies": {
-    "@alpinejs/intersect": "^3.4.0",
-    "@alpinejs/persist": "^3.4.0",
+    "@alpinejs/intersect": "^3.9.0",
+    "@alpinejs/persist": "^3.7.1",
     "@ryangjchandler/fern": "^0.1.0",
-    "alpinejs": "^3.3.2",
+    "alpinejs": "^3.9.0",
     "bulma": "^0.9.3",
     "aos": "3.0.0-beta.6",
     "codemirror": "5.64.0",
@@ -40,7 +40,7 @@
     "notyf": "3.10.0",
     "plyr": "3.6.9",
     "postcss": "8.3.11",
-    "simplebar": "5.3.6"
+    "simplebar": "5.3.3"
   },
   "devDependencies": {
     "@babel/cli": "7.16.0",
