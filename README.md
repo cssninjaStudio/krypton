@@ -12,32 +12,29 @@ Krypton is built with [Bulma](https://bulma.io) and [Alpine JS](https://github.c
 ## 👍 Features
 
 - Gulp 4 and nodejs 12.20.0 to 16.0.0
-- Bulma 0.9.1
+- Bulma 0.9.3
 - ES6 support
-- Alpine JS
+- Alpine v3
 
 ## 👌 Usage
 
 1. Install Dev Depedencies
 
 ```sh
-npm install
+yarn install
 ```
 
 2. To start development server
 
 ```sh
-npm run dev
+yarn dev
 ```
 
 3. Build for production
 
 ```sh
 # build the dist folder
-npm run build
-
-# preview the builded files
-npx http-server dist
+yarn build
 ```
 
 ## 🍔 Issues
