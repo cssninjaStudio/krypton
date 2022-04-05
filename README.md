@@ -2,6 +2,8 @@
 
 > Krypton is a free ICO / Crypto template built by [cssninjaStudio](https://cssninja.io).
 
+![cssninja-discord](https://img.shields.io/discord/785473098069311510?label=joins%20us%20on%20discord&color=6944EC)
+
 ![Screenshot](https://media.cssninja.io/products/krypton/product.png "Krypton")
 
 ## ✌️ preview
