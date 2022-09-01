@@ -19,16 +19,13 @@ Alpine.persistedStore("app", {
 //Start Alpine JS
 Alpine.start();
 
-import { initPageLoader } from './libs/components/pageloader/pageloader';
-import './libs/components'
+import { initPageLoader } from "./libs/components/pageloader/pageloader";
+import "./libs/components";
 
 const showPageloader = initPageLoader();
 
 document.onreadystatechange = function () {
   if (document.readyState == "complete") {
-    //Switch demo images
-    const changeImages = switchDemoImages(env);
-
     //Switch backgrounds
     const changeBackgrounds = insertBgImages();
 

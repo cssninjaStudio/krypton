@@ -92,8 +92,6 @@ function concatCssPlugins() {
   return src([
     nodepath + "simplebar/dist/simplebar.min.css",
     nodepath + "plyr/dist/plyr.css",
-    nodepath + "codemirror/lib/codemirror.css",
-    nodepath + "codemirror/theme/shadowfox.css",
     "src/vendor/css/*",
   ])
     .pipe(sourcemaps.init())
