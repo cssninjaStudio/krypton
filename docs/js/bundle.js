@@ -7331,10 +7331,6 @@
                   shape: {
                     type: "circle"
                   },
-                  stroke: {
-                    width: 0,
-                    color: "#5507fc"
-                  },
                   opacity: {
                     value: 0.6
                   },
