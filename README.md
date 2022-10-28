@@ -8,53 +8,49 @@
 
 ## ✌️ preview
 
-Check out the live demo by clicking [here](https://cssninjastudio.github.io/krypton/).
-Krypton is built with [Bulma](https://bulma.io) and [Alpine JS](https://github.com/alpinejs/alpine).
+Check out the live demo by clicking [here](https://krypton.cssninja.io). 
+Fresh is built with [Bulma](https://bulma.io) and [Alpine JS](https://github.com/alpinejs/alpine).
 
 ## 👍 Features
 
-- Gulp 4 and nodejs 12.20.0 to 16.0.0
-- Bulma 0.9.3
-- ES6 support
-- Alpine v3
+* Gulp 4 and node 16 (minimum)
+* Bulma 0.9.x
+* ES6 support
+* Alpine v3.x
 
 ## 👌 Usage
 
-1. Install Dev Depedencies
+1. Install Depedencies
 
 ```sh
-yarn install
+pnpm i
 ```
 
-2. To start development server
+2. Run in dev mode
 
 ```sh
-yarn dev
+pnpm dev
 ```
 
-3. Build for production
+3. Or build source
 
 ```sh
-# build the dist folder
-yarn build
+pnpm build
 ```
 
 ## 🍔 Issues
 
-If you've found an issue or a bug, you can report it in the issues section of this repository.
-Please try to follow these simple guidelines to report your issue:
+If you've found an issue or a bug, you can report it in the issues section of this repository. Please try to follow these simple guidelines to report your issue:
 
-- Issue definition
-- Expected behaviour
-- Actual behaviour
-- steps to reproduce
-- Already tried fixes (if relevant)
+* Issue definition
+* Expected behaviour
+* Actual behaviour
+* steps to reproduce
+* Already tried fixes (if relevant)
 
 ## 🎉 More
 
-You liked Krypton? Check also our other premium Envato bulma themes [Css Ninja](https://cssninja.io/themes).
-
-Find more premium bulma templates on [Css Ninja](https://cssninja.io/category/all).
+Find more premium website and app templates on [Css Ninja](https://cssninja.io/).
 
 ## 🚀 About Us
 
