@@ -1,0 +1,371 @@
+---
+import Layout from "../layouts/Default.astro";
+import Navbar from "../components/Navbar.astro";
+import NavbarClone from "../components/NavbarClone.astro";
+const title = "Blog";
+---
+
+<Layout title={title}>
+  <div class="media-wrapper">
+    <!-- Landing page Hero -->
+    <section class="hero">
+      <div class="hero-head">
+        <!-- Cloned navbar -->
+        <NavbarClone />
+
+        <!-- Static navbar -->
+        <Navbar />
+      </div>
+
+      <!-- Hero Image and Title -->
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <!-- Landing page Title -->
+            <div class="column is-5 is-offset-1 landing-caption">
+              <div class="divider"></div>
+              <h1 class="title is-1 is-light is-semibold is-spaced main-title">
+                News & Media
+              </h1>
+              <h2 class="subtitle is-6 is-light is-thin">
+                Cryptocurrency brought to the next level. Join our ICO for
+                supercharged rates.
+              </h2>
+            </div>
+            <!-- Hero image -->
+            <div class="column is-6">
+              <figure class="image">
+                <img src="/img/illustrations/media.svg" alt="" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-9">
+            <!-- Content wrapper -->
+            <div class="content-wrapper">
+              <!-- Post -->
+              <div class="blog-post">
+                <a href="blog-single">
+                  <!-- Featured image -->
+                  <div class="featured-image">
+                    <img src="/img/media/post4.svg" alt="" />
+                  </div>
+                  <!-- Content -->
+                  <div class="content">
+                    <div class="post-title">
+                      Featured on Coinative <span class="blog-date"
+                        >02.06.2020</span>
+                    </div>
+                    <p>
+                      Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır
+                      metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının
+                      bir hurufat numune kitabı...
+                    </p>
+                    <!-- Meta -->
+                    <div class="post-meta">
+                      <div class="author-block">
+                        <div class="image is-32x32">
+                          <img src="/img/team/glenn.jpg" alt="" />
+                        </div>
+                        <div class="author-name">
+                          <span>by Glenn Dunward</span>
+                          <span><small>in</small> Featured</span>
+                        </div>
+                      </div>
+                      <div class="stats-block">
+                        <div class="comments">
+                          <i class="iconify" data-icon="lucide:message-circle"></i>
+                          <span>0</span>
+                        </div>
+                        <div class="likes">
+                          <i class="iconify" data-icon="lucide:heart"></i>
+                          <span>39</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Post -->
+              <div class="blog-post">
+                <a href="blog-single">
+                  <!-- Featured image -->
+                  <div class="featured-image">
+                    <img src="/img/media/post1.svg" alt="" />
+                  </div>
+                  <!-- Content -->
+                  <div class="content">
+                    <div class="post-title">
+                      Blockchain for dummies <span class="blog-date"
+                        >27.05.2020</span>
+                    </div>
+                    <p>
+                      Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır
+                      metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının
+                      bir hurufat numune kitabı...
+                    </p>
+                    <!-- Meta -->
+                    <div class="post-meta">
+                      <div class="author-block">
+                        <div class="image is-32x32">
+                          <img src="/img/team/john.jpg" alt="" />
+                        </div>
+                        <div class="author-name">
+                          <span>by John Cambell</span>
+                          <span><small>in</small> Blockchain</span>
+                        </div>
+                      </div>
+                      <div class="stats-block">
+                        <div class="comments">
+                          <i class="iconify" data-icon="lucide:message-circle"></i>
+                          <span>0</span>
+                        </div>
+                        <div class="likes">
+                          <i class="iconify" data-icon="lucide:heart"></i>
+                          <span>39</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Post -->
+              <div class="blog-post">
+                <a href="blog-single">
+                  <!-- Featured image -->
+                  <div class="featured-image">
+                    <img src="/img/media/post5.svg" alt="" />
+                  </div>
+                  <!-- Content -->
+                  <div class="content">
+                    <div class="post-title">
+                      Featured on Bit It <span class="blog-date"
+                        >23.04.2020</span>
+                    </div>
+                    <p>
+                      Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır
+                      metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının
+                      bir hurufat numune kitabı...
+                    </p>
+                    <!-- Meta -->
+                    <div class="post-meta">
+                      <div class="author-block">
+                        <div class="image is-32x32">
+                          <img src="/img/team/helen.jpg" alt="" />
+                        </div>
+                        <div class="author-name">
+                          <span>by Helen Miller</span>
+                          <span><small>in</small> Featured</span>
+                        </div>
+                      </div>
+                      <div class="stats-block">
+                        <div class="comments">
+                          <i class="iconify" data-icon="lucide:message-circle"></i>
+                          <span>0</span>
+                        </div>
+                        <div class="likes">
+                          <i class="iconify" data-icon="lucide:heart"></i>
+                          <span>39</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Post -->
+              <div class="blog-post">
+                <a href="blog-single">
+                  <!-- Featured image -->
+                  <div class="featured-image">
+                    <img src="/img/media/post2.svg" alt="" />
+                  </div>
+                  <!-- Content -->
+                  <div class="content">
+                    <div class="post-title">
+                      The Krypton chain algorythm <span class="blog-date"
+                        >15.04.2020</span>
+                    </div>
+                    <p>
+                      Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır
+                      metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının
+                      bir hurufat numune kitabı...
+                    </p>
+                    <!-- Meta -->
+                    <div class="post-meta">
+                      <div class="author-block">
+                        <div class="image is-32x32">
+                          <img src="/img/team/joshua.jpg" alt="" />
+                        </div>
+                        <div class="author-name">
+                          <span>by Joshua Stevens</span>
+                          <span><small>in</small> Blockchain</span>
+                        </div>
+                      </div>
+                      <div class="stats-block">
+                        <div class="comments">
+                          <i class="iconify" data-icon="lucide:message-circle"></i>
+                          <span>0</span>
+                        </div>
+                        <div class="likes">
+                          <i class="iconify" data-icon="lucide:heart"></i>
+                          <span>39</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Post -->
+              <div class="blog-post">
+                <a href="blog-single">
+                  <!-- Featured image -->
+                  <div class="featured-image">
+                    <img src="/img/media/post3.svg" alt="" />
+                  </div>
+                  <!-- Content -->
+                  <div class="content">
+                    <!--div class="rounded"></div-->
+                    <div class="post-title">
+                      What is Crypto mining ? <span class="blog-date"
+                        >02.04.2020</span>
+                    </div>
+                    <p>
+                      Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır
+                      metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının
+                      bir hurufat numune kitabı...
+                    </p>
+                    <!-- Meta -->
+                    <div class="post-meta">
+                      <div class="author-block">
+                        <div class="image is-32x32">
+                          <img src="/img/team/sandra.jpg" alt="" />
+                        </div>
+                        <div class="author-name">
+                          <span>by Sandra Bernard</span>
+                          <span><small>in</small> Cryptomining</span>
+                        </div>
+                      </div>
+                      <div class="stats-block">
+                        <div class="comments">
+                          <i class="iconify" data-icon="lucide:message-circle"></i>
+                          <span>0</span>
+                        </div>
+                        <div class="likes">
+                          <i class="iconify" data-icon="lucide:heart"></i>
+                          <span>39</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- CTA -->
+              <div class="cta-wrapper has-text-centered">
+                <a
+                  href="#"
+                  class="button k-button k-primary raised has-gradient is-bold"
+                >
+                  <span class="text">Load More</span>
+                  <span class="front-gradient"></span>
+                </a>
+              </div>
+            </div>
+            <!-- /Content wrapper -->
+          </div>
+
+          <div class="column is-3">
+            <div class="search-widget">
+              <div class="control">
+                <!-- Field -->
+                <div class="control-material is-primary">
+                  <input class="material-input" type="email" required />
+                  <span class="material-highlight"></span>
+                  <span class="bar"></span>
+                  <label>Search articles</label>
+                  <i class="iconify" data-icon="lucide:search"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="categories-widget">
+              <div class="widget-title">Categories</div>
+
+              <ul class="categories-list">
+                <li>
+                  <a class="is-active" href="#">
+                    <span>All Posts</span>
+                    <span class="tag">53</span>
+                  </a>
+                </li>
+                <li><a href="#">Blockchain</a></li>
+                <li><a href="#">Crypto Market</a></li>
+                <li><a href="#">Cryptomining</a></li>
+                <li><a href="#">Featured</a></li>
+              </ul>
+            </div>
+
+            <div class="tags-widget">
+              <div class="widget-title">Tags</div>
+
+              <div class="tags">
+                <span class="tag">Bitcoin</span>
+                <span class="tag">Cryptocurrency</span>
+                <span class="tag">Blockchain</span>
+                <span class="tag">Ethereum</span>
+              </div>
+            </div>
+
+            <div class="archives-widget">
+              <div class="widget-title">Archives</div>
+              <div class="select" tabindex="1">
+                <input
+                  class="selectopt"
+                  name="test"
+                  type="radio"
+                  id="opt1"
+                  checked
+                />
+                <label for="opt1" class="option">Select Month</label>
+                <input class="selectopt" name="test" type="radio" id="opt2" />
+                <label for="opt2" class="option">January</label>
+                <input class="selectopt" name="test" type="radio" id="opt3" />
+                <label for="opt3" class="option">February</label>
+                <input class="selectopt" name="test" type="radio" id="opt4" />
+                <label for="opt4" class="option">March</label>
+                <input class="selectopt" name="test" type="radio" id="opt5" />
+                <label for="opt5" class="option">April</label>
+                <input class="selectopt" name="test" type="radio" id="opt6" />
+                <label for="opt6" class="option">May</label>
+                <input class="selectopt" name="test" type="radio" id="opt7" />
+                <label for="opt7" class="option">June</label>
+                <input class="selectopt" name="test" type="radio" id="opt8" />
+                <label for="opt8" class="option">July</label>
+                <input class="selectopt" name="test" type="radio" id="opt9" />
+                <label for="opt9" class="option">August</label>
+                <input class="selectopt" name="test" type="radio" id="opt10" />
+                <label for="opt10" class="option">September</label>
+                <input class="selectopt" name="test" type="radio" id="opt11" />
+                <label for="opt11" class="option">October</label>
+                <input class="selectopt" name="test" type="radio" id="opt12" />
+                <label for="opt12" class="option">November</label>
+                <input class="selectopt" name="test" type="radio" id="opt13" />
+                <label for="opt13" class="option">December</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

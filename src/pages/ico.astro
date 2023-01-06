@@ -1,0 +1,150 @@
+---
+import Layout from "../layouts/Default.astro";
+import Navbar from "../components/Navbar.astro";
+import NavbarClone from "../components/NavbarClone.astro";
+const title = "ICO";
+---
+
+<Layout title={title}>
+  <!-- Landing page Hero -->
+  <section class="hero is-fullheight has-big-dark-gradient">
+    <div class="hero-head">
+      <!-- Cloned navbar -->
+      <NavbarClone />
+
+      <!-- Static navbar -->
+      <Navbar />
+    </div>
+
+    <!-- Hero Image and Title -->
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <!-- Landing page Title -->
+          <div class="column is-5 landing-caption">
+            <h1
+              class="title is-3 is-light is-semibold is-spaced main-title has-text-centered"
+            >
+              Login to ICO
+            </h1>
+            <form class="login-form">
+              <!-- Field -->
+              <div class="control-material is-primary">
+                <input class="material-input" type="email" required />
+                <span class="material-highlight"></span>
+                <span class="bar"></span>
+                <label>Email</label>
+              </div>
+              <!-- Field -->
+              <div class="control-material is-primary">
+                <input class="material-input" type="password" required />
+                <span class="material-highlight"></span>
+                <span class="bar"></span>
+                <label>Password</label>
+              </div>
+
+              <!-- Submit -->
+              <div>
+                <button
+                  class="button is-button k-button k-primary raised has-gradient is-bold is-fullwidth"
+                >
+                  <span class="text">Login</span>
+                  <span class="front-gradient"></span>
+                </button>
+              </div>
+            </form>
+          </div>
+          <!-- Hero image -->
+          <div class="column is-5 is-offset-1 ico-countdown">
+            <div
+              x-data="initCountdown()"
+              x-init="setupCountdown()"
+              class="ico-card animated preFadeInUp fadeInUp"
+            >
+              <!-- Countdown -->
+              <ul id="countdown" class="is-ico">
+                <li id="days">
+                  <div id="days-count" class="timer-number">00</div>
+                  <div class="label">Days</div>
+                </li>
+                <li id="hours">
+                  <div id="hours-count" class="timer-number">00</div>
+                  <div class="label">Hours</div>
+                </li>
+                <li id="minutes">
+                  <div id="minutes-count" class="timer-number">00</div>
+                  <div class="label">Minutes</div>
+                </li>
+                <li id="seconds">
+                  <div id="seconds-count" class="timer-number">00</div>
+                  <div class="label">Seconds</div>
+                </li>
+              </ul>
+              <!-- Progress bar -->
+              <div class="progress-block">
+                <!-- Tags -->
+                <div class="progress-tags">
+                  <div>Presale</div>
+                  <div>Soft Cap</div>
+                  <div>Bonus</div>
+                </div>
+                <progress class="progress ico-progress" value="65" max="100"
+                  >65%</progress
+                >
+              </div>
+
+              <!-- Button -->
+              <div class="button-block">
+                <a
+                  href="#"
+                  class="button k-button k-secondary raised has-gradient is-bold is-fullwidth rounded"
+                >
+                  <span class="text">Register for ICO</span>
+                  <span class="front-gradient"></span>
+                </a>
+              </div>
+
+              <!-- Icons -->
+              <div class="icon-block">
+                <i class="cf cf-btc"></i>
+                <i class="cf cf-eth"></i>
+                <i class="cf cf-ltc"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero footer -->
+    <div class="hero-foot">
+      <div class="container">
+        <div class="tabs is-centered">
+          <!-- Client / partner list -->
+          <ul>
+            <li>
+              <a
+                ><img
+                  class="hero-logo"
+                  src="/img/clients/cryptomarket.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                ><img class="hero-logo" src="/img/clients/bitit.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a
+                ><img class="hero-logo" src="/img/clients/coin.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Landing page Hero -->
+</Layout>

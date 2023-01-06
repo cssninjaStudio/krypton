@@ -1,0 +1,56 @@
+$size: 8;
+$total: 40;
+
+.starfall {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  z-index: 0;
+
+  .falling-star {
+    width: $size + px;
+    height: $size + px;
+    background: $secondary;
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+}
+
+@for $i from 1 through $total {
+  $x: random(200);
+
+  .falling-star:nth-child(#{$i}) {
+    transform: translateX($x + vw) translateY(-$size + px);
+    animation: anim#{$i} 2s infinite;
+    animation-delay: $i * 0.3s;
+  }
+
+  @keyframes anim#{$i} {
+    10% {
+      opacity: 0.5;
+    }
+
+    12% {
+      opacity: 1;
+      box-shadow: 0 0 3px 0 white;
+    }
+
+    15% {
+      opacity: 0.5;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX($x + 40 + vw) translateY(100vh);
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+---
+import BackToTop from '../components/BackToTop.astro'
+import 'simplebar/dist/simplebar.min.css'
+import 'plyr/dist/plyr.css'
+import '../styles/main.scss'
+const {title} = Astro.props
+---
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Krypton {'- ' + title}</title>
+
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!--Body partial-->
+    <slot />
+
+    <!--Back to top-->
+    <BackToTop />
+
+    <script src="../js/main"></script>
+  </body>
+</html>

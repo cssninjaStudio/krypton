@@ -1,0 +1,212 @@
+/*! _forms.scss | Krypton | CSS Ninja */
+
+/* ==========================================================================
+Form components styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Material Inputs
+1. Contact form
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Material Inputs
+========================================================================== */
+
+//Material control
+.control-material {
+    position: relative;
+    margin-bottom: 3em;
+
+    input, textarea {
+        border-radius: 0 !important;
+        border-color: rgba(0, 0, 0, 0.05);
+        resize: none;
+    }
+
+    //primary colors
+    &.is-primary {
+        input.material-input:focus ~ label, input:valid ~ label, textarea:focus ~ label {
+            color: $primary;
+        }
+
+        input, textarea {
+            color: $white;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+        }
+
+        .bar:before {
+            @include primary-gradient-right;
+        }
+
+        .bar:after {
+            @include primary-gradient-left;
+        }
+
+        &.has-icon input:focus ~ i {
+            color: $primary !important;
+        }
+    }
+
+    //secondary colors
+    &.is-secondary {
+        input.material-input:focus ~ label, input:valid ~ label, textarea:focus ~ label {
+            color: $secondary;
+        }
+
+        input, textarea {
+            color: $white;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+        }
+
+        .bar:before {
+            @include secondary-gradient-right;
+        }
+
+        .bar:after {
+            @include secondary-gradient-left;
+        }
+
+        &.has-icon input:focus ~ i {
+            color: $secondary !important;
+        }
+    }
+
+    //Common material styles
+    input.material-input, textarea {
+        width: 100% !important;
+        font-size: 18px;
+        padding: 0.625em  0.625em 0.625em 0.3125em;
+        display: block;
+        width: 18.75em;
+        border: none;
+        border-bottom: 1px solid $title-grey;
+        background-color: transparent !important;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    //Floating label
+    label {
+        font-family: 'Arial';
+        color: $placeholder;
+        font-size: 15px;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 0.3125em;
+        top: 0.625em;
+        transition: 0.2s ease all;
+    }
+
+    input.material-input:focus ~ label, input:valid ~ label, textarea:focus ~ label {
+        top: -20px;
+        left: -2px;
+        font-size: 12px;
+    }
+
+    //bottom bar
+    .bar {
+        position: relative;
+        display: block;
+    }
+
+    .bar:before, .bar:after {
+        content: '';
+        height: 2px;
+        width: 0;
+        bottom: 0px;
+        position: absolute;
+        transition: 0.2s ease all;
+    }
+
+    .bar:before {
+        left: 50%;
+    }
+
+    .bar:after {
+        right: 50%;
+    }
+
+    input.material-input:focus ~ .bar:before, input.material-input:focus ~ .bar:after, textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
+        width: 50%;
+    }
+}
+
+//Input and textareas text colors
+.control-material textarea {
+    color: $white;
+}
+
+/* ==========================================================================
+1. Contact form
+========================================================================== */
+
+//Wrapper
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    //Icon
+    .contact-icon {
+        position: relative;
+        height: 54px;
+        width: 54px;
+        background: $secondary;
+        background: -webkit-linear-gradient(to right, $secondary, $secondary-accent) !important;
+        background: linear-gradient(to right, $secondary, $secondary-accent) !important;
+        border-radius: 50%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        cursor: pointer;
+
+        //Inner image
+        img {
+            position: absolute;
+            display: block;
+            width: 24px;
+            height: 24px;
+
+            //left: 2px;
+            z-index: 3;
+
+            //Telegram icon position
+            &.is-telegram {
+                top: calc(50% - 12px);
+                left: calc(50% - 14px);
+            }
+        }
+
+        //Pseudo pulsating element
+        &:after {
+            content: '';
+            position: absolute;
+            top: calc(50% - 12px);
+            left: calc(50% - 12px);
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: $secondary;
+            background: -webkit-linear-gradient(to right, $secondary, $secondary-accent) !important;
+            background: linear-gradient(to right, $secondary, $secondary-accent) !important;
+            animation: pulse 1.6s infinite;
+            animation-duration: 2s;
+            transform-origin: center center;
+            z-index: 0;
+        }
+    }
+}
+
+//Contact form spacing
+.contact-form {
+    margin-top: 40px;
+}
