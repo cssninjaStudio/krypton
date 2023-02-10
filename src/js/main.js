@@ -15,7 +15,7 @@ Alpine.plugin(collapse);
 //Init store
 Alpine.store("app", {
   init() {
-    this.on = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    this.isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   },
   isDark: Alpine.$persist(false),
   isSidebarOpened: Alpine.$persist(false),
