@@ -1,4 +1,5 @@
 ---
+import Unfont from 'unplugin-fonts/astro/component.astro';
 import Footer from '../components/Footer.astro'
 import BackToTop from '../components/BackToTop.astro'
 import 'simplebar/dist/simplebar.min.css'
@@ -10,6 +11,7 @@ const {title} = Astro.props
 <html dir="ltr" lang="en">
   <head>
     <meta charset="UTF-8" />
+    <Unfont />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Krypton {'- ' + title}</title>
@@ -23,9 +25,6 @@ const {title} = Astro.props
     <!-- End Google Tag Manager -->
 
     <link rel="icon" type="image/png" href="/img/favicon.png" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
   </head>
 
   <body>
