@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.2.0](https://github.com/cssninjaStudio/krypton/compare/v5.1.0...v5.2.0) (2023-09-17)
+
+
+### Features
+
+* migrate to Astro 3 ([c8172e0](https://github.com/cssninjaStudio/krypton/commit/c8172e0c798ee30a41a29adbe7548cf3952da113))
+* use variable fonts from fontsources ([a8c9e31](https://github.com/cssninjaStudio/krypton/commit/a8c9e314cbab34002d3c218235e3293f9c0d0b57))
+
+
+### Bug Fixes
+
+* upgrade engines to node 18 and pnpm 8 ([80f1d32](https://github.com/cssninjaStudio/krypton/commit/80f1d3240775ab45e57c76921d568959e61fcddc))
+
 ## [5.1.0](https://github.com/cssninjaStudio/krypton/compare/v5.0.0...v5.1.0) (2023-05-03)
 
 
