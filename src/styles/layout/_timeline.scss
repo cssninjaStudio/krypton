@@ -360,13 +360,13 @@ TABLE OF CONTENTS
             -ms-transform: translateY(-50%);
             -o-transform: translateY(-50%);
             transform: translateY(-50%);
-            background: url(../img/icons/chevron-left.svg) no-repeat 0 0;
+            background: url(/img/icons/chevron-left.svg) no-repeat 0 0;
         }
 
         //Next button
         &.next {
             right: 0;
-            background: url(../img/icons/chevron-right.svg) no-repeat 0 0;
+            background: url(/img/icons/chevron-right.svg) no-repeat 0 0;
         }
 
         //Inactive state

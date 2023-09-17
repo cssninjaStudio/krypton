@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.1.0](https://github.com/cssninjaStudio/krypton/compare/v5.0.0...v5.1.0) (2023-05-03)
+
+
+### Features
+
+* upgrade dependencies + add unplugin-fonts ([c6647a9](https://github.com/cssninjaStudio/krypton/commit/c6647a9e21c5aaa8682d1e47cb803ac52811a139))
+* upgrade to Astro v2 ([ae531d7](https://github.com/cssninjaStudio/krypton/commit/ae531d7c1d6cdafb4e3dea5a9b39c36fa6021729))
+
 ## [5.0.0](https://github.com/cssninjaStudio/krypton/compare/v4.1.2...v5.0.0) (2023-01-06)
 
 
