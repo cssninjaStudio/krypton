@@ -13,8 +13,8 @@ Fresh is built with [Bulma](https://bulma.io) and [Alpine JS](https://github.com
 
 ## 👍 Features
 
-* Astro v1.x
-* Node v16.x
+* Astro v3.x
+* Node v18.x
 * Bulma v0.9.x
 * ES6 support
 * Alpine v3.x
