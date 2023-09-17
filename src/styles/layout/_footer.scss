@@ -38,7 +38,7 @@ TABLE OF CONTENTS
 
         //Brand
         .brand-name {
-            font-family: 'Cabin', sans-serif;
+            font-family: $font-heading;
             text-transform: uppercase;
             font-weight: 600;
             color: $white;
@@ -49,7 +49,7 @@ TABLE OF CONTENTS
 
         //Motto
         .brand-subtitle {
-            font-family: 'Open Sans', sans-serif;
+            font-family: $font;
             text-transform: uppercase;
             letter-spacing: 2px;
             font-size: .65rem;
@@ -68,7 +68,7 @@ TABLE OF CONTENTS
             //Title
             .subscribe-title {
                 padding: 10px 0;
-                font-family: 'Open Sans', sans-serif;
+                font-family: $font;
                 text-transform: uppercase;
                 letter-spacing: 2px;
                 font-size: .55rem;
@@ -115,7 +115,7 @@ TABLE OF CONTENTS
                     height: 40px;
                     padding: 0 26px;
                     text-transform: uppercase;
-                    font-family: 'Cabin', sans-serif;
+                    font-family: $font-heading;
                     font-weight: 500;
                     border-radius: 100px;
                     cursor: pointer;
@@ -143,7 +143,7 @@ TABLE OF CONTENTS
                 a {
                     position: relative;
                     text-transform: uppercase;
-                    font-family: 'Cabin', sans-serif;
+                    font-family: $font-heading;
                     font-weight: 500;
                     font-size: .8rem;
                     color: $white;
@@ -191,7 +191,7 @@ TABLE OF CONTENTS
     .k-copyright {
         position: relative;
         color: $primary;
-        font-family: 'Open Sans', sans-serif;
+        font-family: $font;
         font-size: .85rem;
         z-index: 2;
     }
@@ -200,7 +200,7 @@ TABLE OF CONTENTS
     .coded-by {
         position: relative;
         color: $white;
-        font-family: 'Open Sans', sans-serif;
+        font-family: $font;
         font-size: .7rem;
         z-index: 2;
 

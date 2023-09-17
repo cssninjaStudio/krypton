@@ -78,11 +78,11 @@ TABLE OF CONTENTS
 
     h4 {
         margin-top: 10px;
-        font-family: 'Cabin', sans-serif;
+        font-family: $font-heading;
     }
 
     p {
-        font-family: 'Open Sans', sans-serif;
+        font-family: $font;
         font-size: .9rem;
         opacity: 0.8;
         max-width: 280px;
@@ -161,7 +161,7 @@ TABLE OF CONTENTS
 
         //link element
         a {
-            font-family: 'Cabin', sans-serif;
+            font-family: $font-heading;
             display: inline-block;
             width: 24.4%;
             padding: .75rem 0;
@@ -240,7 +240,7 @@ TABLE OF CONTENTS
                 div {
                     position: relative;
                     text-align: right;
-                    font-family: 'Cabin', sans-serif;
+                    font-family: $font-heading;
                     font-size: .65rem;
                     text-transform: uppercase;
 
@@ -320,7 +320,7 @@ TABLE OF CONTENTS
             li {
                 padding: 10px 0;
                 color: $white;
-                font-family: 'Open Sans', sans-serif;
+                font-family: $font;
                 font-weight: 300;
 
                 &:first-child {
@@ -337,13 +337,13 @@ TABLE OF CONTENTS
 
                 span {
                     &:first-child {
-                        font-family: 'Cabin', sans-serif;
+                        font-family: $font-heading;
                     }
 
                     &.item-content {
                         margin: 0 16px !important;
                         font-size: 90%;
-                        font-family: 'Open Sans', sans-serif;
+                        font-family: $font;
                         font-weight: 300;
                         color: #e8e8e8;
                     }

@@ -117,7 +117,7 @@ TABLE OF CONTENTS
             //position in company
             .position {
                 text-transform: uppercase;
-                font-family: 'Open Sans', sans-serif;
+                font-family: $font;
                 font-size: .75rem;
                 color: $primary;
             }
@@ -149,7 +149,7 @@ TABLE OF CONTENTS
     .info {
         .position {
             text-transform: uppercase;
-            font-family: 'Open Sans', sans-serif;
+            font-family: $font;
             font-size: .75rem;
             color: $primary;
         }

@@ -54,6 +54,12 @@ dependencies:
     version: 6.2.5
 
 devDependencies:
+  '@fontsource-variable/cabin':
+    specifier: ^5.0.9
+    version: 5.0.9
+  '@fontsource-variable/open-sans':
+    specifier: ^5.0.13
+    version: 5.0.13
   autoprefixer:
     specifier: 10.4.15
     version: 10.4.15(postcss@8.4.29)
@@ -741,6 +747,14 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource-variable/cabin@5.0.9:
+    resolution: {integrity: sha512-9h0hjK8+U2CC0KzNeqItcY354s4do8iXRgqqM6+YMFaMqix75RUgr9mQwXwU0KErjssLJTEjKI8HUT/arD262w==}
+    dev: true
+
+  /@fontsource-variable/open-sans@5.0.13:
+    resolution: {integrity: sha512-G/lTR5vVBcwRU0vkeYqFfX1UEqHfCG52ccdVgcjwSOcDvi5jQEL3ta212qA2rKwSdhmdei600yNburmYoT1wsg==}
+    dev: true
 
   /@iconify/iconify@3.1.1:
     resolution: {integrity: sha512-1nemfyD/OJzh9ALepH7YfuuP8BdEB24Skhd8DXWh0hzcOxImbb1ZizSZkpCzAwSZSGcJFmscIBaBQu+yLyWaxQ==}

@@ -108,7 +108,7 @@ body {
 
             //brand text
             .brand-name {
-                font-family: 'Cabin', sans-serif;
+                font-family: $font-heading;
                 font-size: 1.2rem;
                 font-weight: 600;
                 padding: 0 10px;
@@ -127,7 +127,7 @@ body {
         //Navbar items
         .navbar-item {
             a.button {
-                font-family: 'Cabin', sans-serif;
+                font-family: $font-heading;
                 text-transform: uppercase;
 
                 &.hover {
@@ -139,7 +139,7 @@ body {
             //Nav link modifier
             &.is-nav-link {
                 a {
-                    font-family: 'Cabin', sans-serif;
+                    font-family: $font-heading;
                     text-transform: uppercase;
                     font-size: .75rem;
                 }
@@ -337,7 +337,7 @@ body {
 .buy-title {
     padding: 20px 0;
     text-transform: uppercase;
-    font-family: 'Cabin', sans-serif;
+    font-family: $font-heading;
     font-size: .8rem;
     color: $white;
     opacity: 0.7;
@@ -396,7 +396,7 @@ body {
 
 //Titles
 .title {
-    font-family: 'Cabin', sans-serif;
+    font-family: $font-heading;
 
     &.main-title {
         text-shadow: 4px 4px 2px rgba(150, 150, 150, 0.1);
@@ -405,7 +405,7 @@ body {
 
 //Subtitles
 .subtitle {
-    font-family: 'Cabin', sans-serif;
+    font-family: $font-heading;
     opacity: 0.8;
 
     &.is-compact {
@@ -522,14 +522,14 @@ body {
             }
 
             .share-title {
-                font-family: 'Cabin', sans-serif;
+                font-family: $font-heading;
                 text-transform: uppercase;
                 color: rgba(94, 147, 255, 0.9);
                 padding: 5px 0;
             }
 
             .percentage {
-                font-family: 'Open Sans', sans-serif;
+                font-family: $font;
                 color: rgba(94, 147, 255, 0.9);
             }
         }
@@ -556,7 +556,7 @@ body {
 
         .documentation-title {
             padding-bottom: 20px;
-            font-family: 'Cabin', sans-serif;
+            font-family: $font-heading;
             font-size: 1.8rem;
             color: $white;
         }
@@ -618,7 +618,7 @@ body {
                 div {
                     position: relative;
                     text-align: right;
-                    font-family: 'Cabin', sans-serif;
+                    font-family: $font-heading;
                     font-size: .65rem;
                     text-transform: uppercase;
 
@@ -770,7 +770,7 @@ body {
 
                 &.item-title {
                     color: $white;
-                    font-family: 'Cabin', sans-serif;
+                    font-family: $font-heading;
                     font-size: 1.2rem;
                 }
 
@@ -793,7 +793,7 @@ body {
 
                     a {
                         transition: all .3s;
-                        font-family: 'Cabin', sans-serif;
+                        font-family: $font-heading;
 
                         &:hover {
                             color: $light-blue;
@@ -1002,7 +1002,7 @@ body {
         margin-bottom: 20px;
 
         .widget-title {
-            font-family: 'Cabin', sans-serif;
+            font-family: $font-heading;
             font-size: 1.1rem;
             text-transform: uppercase;
             color: $light-blue;
@@ -1019,7 +1019,7 @@ body {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    font-family: 'Cabin', sans-serif;
+                    font-family: $font-heading;
                     font-size: .95rem;
                     color: $white;
                     opacity: 0.6;
@@ -1052,7 +1052,7 @@ body {
         margin-bottom: 20px;
 
         .widget-title {
-            font-family: 'Cabin', sans-serif;
+            font-family: $font-heading;
             font-size: 1.1rem;
             text-transform: uppercase;
             color: $light-blue;
@@ -1081,7 +1081,7 @@ body {
         margin-bottom: 20px;
 
         .widget-title {
-            font-family: 'Cabin', sans-serif;
+            font-family: $font-heading;
             font-size: 1.1rem;
             text-transform: uppercase;
             color: $light-blue;
@@ -1099,7 +1099,7 @@ body {
 
         .option {
             font-size: .9rem;
-            font-family: 'Cabin', sans-serif;
+            font-family: $font-heading;
             font-weight: 300 !important;
             padding: 0 30px 0 10px;
             min-height: 40px;
@@ -1173,7 +1173,7 @@ body {
         margin-bottom: 20px;
 
         .widget-title {
-            font-family: 'Cabin', sans-serif;
+            font-family: $font-heading;
             font-size: 1.1rem;
             text-transform: uppercase;
             color: $light-blue;
@@ -1188,7 +1188,7 @@ body {
                 justify-content: flex-start;
                 align-items: center;
                 margin-bottom: 20px;
-                font-family: 'Cabin', sans-serif;
+                font-family: $font-heading;
 
                 img {
                     height: 32px;
@@ -1234,20 +1234,20 @@ body {
 
         .intro {
             font-style: italic;
-            font-family: 'Cabin', sans-serif;
+            font-family: $font-heading;
             color: $white;
             opacity: 0.8;
         }
 
         h2 {
-            font-family: 'Cabin', sans-serif;
+            font-family: $font-heading;
             font-size: 1.5rem;
             color: $white;
             padding: 10px 0;
         }
 
         p {
-            font-family: 'Cabin', sans-serif;
+            font-family: $font-heading;
             font-size: .9rem;
             color: $white;
             padding-bottom: 20px;
@@ -1298,12 +1298,12 @@ body {
 
                     span {
                         font-size: .9rem;
-                        font-family: 'Cabin', sans-serif;
+                        font-family: $font-heading;
                         color: $light-blue;
                     }
 
                     small {
-                        font-family: 'Cabin', sans-serif;
+                        font-family: $font-heading;
                         font-size: .8rem;
                         color: $light-blue;
                         opacity: 0.7;
@@ -1312,7 +1312,7 @@ body {
                 }
 
                 p {
-                    font-family: 'Cabin', sans-serif;
+                    font-family: $font-heading;
                     font-size: .9rem;
                     color: $white;
                     opacity: 0.7;

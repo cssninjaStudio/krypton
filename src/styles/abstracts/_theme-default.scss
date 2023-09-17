@@ -7,14 +7,15 @@ Default theme variables
 /***
 TABLE OF CONTENTS
 =============================================================================
-0. Variables
-1. Shadow variables
-2. Gradient mixins
+0. Colors Variables
+1. Fonts Variables
+2. Shadow variables
+3. Gradient mixins
 =============================================================================
 ***/
 
 /* ==========================================================================
-0. Color Variables
+0. Colors Variables
 ========================================================================== */
 
 $fullhd-enabled: false;
@@ -25,7 +26,14 @@ $secondary: #00ff99;
 $secondary-accent: #33ccff;
 
 /* ==========================================================================
-1. Shadow variables
+1. Fonts Variables
+========================================================================== */
+
+$font: 'Open Sans Variable', sans-serif;
+$font-heading: 'Cabin Variable', sans-serif;
+
+/* ==========================================================================
+2. Shadow variables
 ========================================================================== */
 
 //Base shadow
@@ -54,7 +62,7 @@ $secondary-box-shadow: 0 14px 26px -12px $secondary-shadow-from, 0 4px 23px 0px 
 }
 
 /* ==========================================================================
-2. Gradient mixins
+3. Gradient mixins
 ========================================================================== */
 
 @mixin theme-hero-gradient {

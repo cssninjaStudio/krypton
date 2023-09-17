@@ -90,7 +90,7 @@ TABLE OF CONTENTS
             z-index: 2;
             text-align: center;
             font-size: .75rem;
-            font-family: 'Cabin', sans-serif;
+            font-family: $font-heading;
             padding-bottom: 15px;
 
             //Fix for issue on Safari - text flickering while timeline translates
@@ -284,7 +284,7 @@ TABLE OF CONTENTS
         .event-title {
             font-weight: 600;
             font-size: 1.2rem;
-            font-family: 'Cabin', sans-serif;
+            font-family: $font-heading;
             font-weight: 700;
             line-height: 1.2;
         }

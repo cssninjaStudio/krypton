@@ -43,7 +43,7 @@ TABLE OF CONTENTS
         max-width: 1000px;
         margin: auto;
         color: #333;
-        font-family: 'Open Sans', sans-serif;
+        font-family: $font;
         font-size: 14px;
         border-radius: 6px;
         margin-bottom: 20px;
@@ -68,14 +68,14 @@ TABLE OF CONTENTS
             text-transform: capitalize;
             color: $white;
             font-weight: 500;
-            font-family: 'Cabin', sans-serif;
+            font-family: $font-heading;
 
             //Date
             .blog-date {
                 font-size: 12px;
                 margin-left: 20px;
                 color: $white;
-                font-family: 'Cabin', sans-serif;
+                font-family: $font-heading;
 
                 &:before {
                     content: '|';
@@ -120,7 +120,7 @@ TABLE OF CONTENTS
 
                 .author-name {
                     font-size: .75rem;
-                    font-family: 'Cabin', sans-serif;
+                    font-family: $font-heading;
                     color: $white;
                     padding: 0 10px;
 
@@ -205,7 +205,7 @@ TABLE OF CONTENTS
 
         .author-name {
             font-size: .75rem;
-            font-family: 'Cabin', sans-serif;
+            font-family: $font-heading;
             color: $white;
             padding: 0 10px;
 
