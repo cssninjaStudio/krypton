@@ -78,5 +78,5 @@ jobs:
           script_stop: true
           script: |
             cd ${{ secrets.HOST_DIRECTORY }}
-            docker-compose pull
-            docker-compose up -d --force-recreate --remove-orphans
+            docker compose pull
+            docker compose up -d --force-recreate --remove-orphans
