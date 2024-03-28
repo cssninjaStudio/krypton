@@ -29,23 +29,14 @@ Hamburger menu icon
         width: 30px;
         height: 30px;
 
-        &.active > span.rotate {
-            /*transform*/
-            -webkit-transform: rotate(90deg);
-            -moz-transform: translate(0px, 0px) rotate(90deg);
-            -ms-transform: translate(0px, 0px) rotate(90deg);
-            -o-transform: translate(0px, 0px) rotate(90deg);
-            transform: translate(0px, 0px) rotate(90deg);
-        }
-
-        &.active > span > i.icon-line-center {
+        &.active > div > i.icon-line-center {
             visibility: hidden;
             width: 1px;
             height: 3px;
             left: 70%;
         }
 
-        &.active > span > i.icon-line-bottom {
+        &.active > div > i.icon-line-bottom {
             margin: -2px 0 0 -10px;
             left: 50%;
             top: 12px;
@@ -58,7 +49,7 @@ Hamburger menu icon
             transform: translate(0px, 0px) rotate(135deg);
         }
 
-        &.active > span > i.icon-line-top {
+        &.active > div > i.icon-line-top {
             margin: -2px 0 0 -10px;
             left: 50%;
             top: 12px;
