@@ -980,18 +980,22 @@ body {
             }
 
             input:focus {
-                ~ svg {
+                ~ .iconify {
                     transform: translateX(0) rotate(0);
                     opacity: 1;
                 }
             }
         }
 
-        svg {
+        .iconify {
             position: absolute;
             right: 10px;
             top: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             stroke: $secondary;
+            color: $secondary;
             transition: all .3s;
             transform: translateX(60px) rotate(360deg);
             opacity: 0;

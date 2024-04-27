@@ -1,14 +1,8 @@
 <!-- Cloned navbar that comes in on scroll -->
-<nav
-  x-data="initNavbar()"
-  x-on:scroll.window="scroll()"
-  id="navbar-clone"
-  class="navbar is-fixed is-dark"
-  :class="{
+<nav x-data="initNavbar()" x-on:scroll.window="scroll()" id="navbar-clone" class="navbar is-fixed is-dark" :class=`{
   'is-active': scrolled,
   '': !scrolled
-}"
->
+}`>
   <div class="container">
     <!-- Brand -->
     <div class="navbar-brand">
@@ -19,13 +13,10 @@
       <!-- Responsive toggle -->
       <div class="navbar-burger" @click="openMobileMenu()">
         <div class="menu-toggle">
-          <span
-            class="icon-box-toggle"
-            :class="{
-                      'active': mobileOpen,
-                      '': !mobileOpen
-                  }"
-          >
+          <span class="icon-box-toggle" :class=`{
+                'active': mobileOpen,
+                '': !mobileOpen
+            }`>
             <span class="rotate">
               <i class="icon-line-top"></i>
               <i class="icon-line-center"></i>
@@ -36,14 +27,10 @@
       </div>
     </div>
     <!-- Menu -->
-    <div
-      id="cloneNavbarMenu"
-      class="navbar-menu"
-      :class="{
+    <div id="cloneNavbarMenu" class="navbar-menu" :class=`{
           'is-active': mobileOpen,
           '': !mobileOpen
-      }"
-    >
+      }`>
       <div class="navbar-end">
         <!-- Menu item -->
         <div class="navbar-item is-nav-link">
@@ -70,10 +57,7 @@
         </div>
         <!-- Sign up -->
         <div class="navbar-item is-nav-link">
-          <a
-            href="#"
-            class="button k-button k-primary raised has-gradient slanted"
-          >
+          <a href="#" class="button k-button k-primary raised has-gradient slanted">
             <span class="text">Register</span>
             <span class="front-gradient"></span>
           </a>

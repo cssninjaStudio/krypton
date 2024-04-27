@@ -1,8 +1,8 @@
 ---
-import Layout from "../layouts/Default.astro";
-import Navbar from "../components/Navbar.astro";
-import NavbarClone from "../components/NavbarClone.astro";
-const title = "ICO";
+import Layout from '../layouts/Default.astro'
+import Navbar from '../components/Navbar.astro'
+import NavbarClone from '../components/NavbarClone.astro'
+const title = 'ICO'
 ---
 
 <Layout title={title}>
@@ -22,11 +22,7 @@ const title = "ICO";
         <div class="columns is-vcentered">
           <!-- Landing page Title -->
           <div class="column is-5 landing-caption">
-            <h1
-              class="title is-3 is-light is-semibold is-spaced main-title has-text-centered"
-            >
-              Login to ICO
-            </h1>
+            <h1 class="title is-3 is-light is-semibold is-spaced main-title has-text-centered">Login to ICO</h1>
             <form class="login-form">
               <!-- Field -->
               <div class="control-material is-primary">
@@ -45,9 +41,7 @@ const title = "ICO";
 
               <!-- Submit -->
               <div>
-                <button
-                  class="button is-button k-button k-primary raised has-gradient is-bold is-fullwidth"
-                >
+                <button class="button is-button k-button k-primary raised has-gradient is-bold is-fullwidth">
                   <span class="text">Login</span>
                   <span class="front-gradient"></span>
                 </button>
@@ -56,11 +50,7 @@ const title = "ICO";
           </div>
           <!-- Hero image -->
           <div class="column is-5 is-offset-1 ico-countdown">
-            <div
-              x-data="initCountdown()"
-              x-init="setupCountdown()"
-              class="ico-card animated preFadeInUp fadeInUp"
-            >
+            <div x-data="initCountdown()" x-init="setupCountdown()" class="ico-card animated preFadeInUp fadeInUp">
               <!-- Countdown -->
               <ul id="countdown" class="is-ico">
                 <li id="days">
@@ -88,17 +78,12 @@ const title = "ICO";
                   <div>Soft Cap</div>
                   <div>Bonus</div>
                 </div>
-                <progress class="progress ico-progress" value="65" max="100"
-                  >65%</progress
-                >
+                <progress class="progress ico-progress" value="65" max="100">65%</progress>
               </div>
 
               <!-- Button -->
               <div class="button-block">
-                <a
-                  href="#"
-                  class="button k-button k-secondary raised has-gradient is-bold is-fullwidth rounded"
-                >
+                <a href="#" class="button k-button k-secondary raised has-gradient is-bold is-fullwidth rounded">
                   <span class="text">Register for ICO</span>
                   <span class="front-gradient"></span>
                 </a>
@@ -123,23 +108,13 @@ const title = "ICO";
           <!-- Client / partner list -->
           <ul>
             <li>
-              <a
-                ><img
-                  class="hero-logo"
-                  src="/img/clients/cryptomarket.svg"
-                  alt=""
-                />
-              </a>
+              <a><img class="hero-logo" src="/img/clients/cryptomarket.svg" alt="" /> </a>
             </li>
             <li>
-              <a
-                ><img class="hero-logo" src="/img/clients/bitit.svg" alt="" />
-              </a>
+              <a><img class="hero-logo" src="/img/clients/bitit.svg" alt="" /> </a>
             </li>
             <li>
-              <a
-                ><img class="hero-logo" src="/img/clients/coin.svg" alt="" />
-              </a>
+              <a><img class="hero-logo" src="/img/clients/coin.svg" alt="" /> </a>
             </li>
           </ul>
         </div>

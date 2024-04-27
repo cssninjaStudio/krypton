@@ -9,14 +9,12 @@
 ## ✌️ preview
 
 Check out the live demo by clicking [here](https://krypton.cssninja.io). 
-Fresh is built with [Bulma](https://bulma.io) and [Alpine JS](https://github.com/alpinejs/alpine).
+Krypton is built with [Astro](https://astro.build), [Bulma](https://bulma.io) and [Alpine JS](https://github.com/alpinejs/alpine).
 
 ## 👍 Features
 
-* Astro v3.x
-* Node v18.x
-* Bulma v0.9.x
-* ES6 support
+* Astro v4.x
+* Bulma 0.9.x
 * Alpine v3.x
 
 ## 👌 Usage
