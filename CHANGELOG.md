@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.3.0](https://github.com/cssninjaStudio/krypton/compare/v5.2.0...v5.3.0) (2024-04-27)
+
+
+### Features
+
+* migrate to iconify-icon, update dependencies ([6b63ecd](https://github.com/cssninjaStudio/krypton/commit/6b63ecdb5efc1c7026ec54bd85790ae335f63d8a))
+
 ## [5.2.0](https://github.com/cssninjaStudio/krypton/compare/v5.1.0...v5.2.0) (2023-09-17)
 
 
