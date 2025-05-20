@@ -11,8 +11,8 @@ Hamburger menu icon
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 4rem;
-    height: 4rem;
+    // width: 4rem;
+    // height: 4rem;
     cursor: pointer;
     padding: 0;
     transition: opacity 0.4s;
@@ -28,6 +28,7 @@ Hamburger menu icon
         display: block;
         width: 30px;
         height: 30px;
+        transform: translateX(-10px);
 
         &.active > span.rotate {
             /*transform*/
@@ -36,6 +37,7 @@ Hamburger menu icon
             -ms-transform: translate(0px, 0px) rotate(90deg);
             -o-transform: translate(0px, 0px) rotate(90deg);
             transform: translate(0px, 0px) rotate(90deg);
+            transform: translateY(3px);
         }
 
         &.active > span > i.icon-line-center {

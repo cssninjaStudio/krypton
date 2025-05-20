@@ -1,8 +1,12 @@
 <!-- Static navbar -->
-<nav x-data="initNavbar()" class="navbar is-light" :class=`{
+<nav
+  x-data="initNavbar()"
+  class="navbar is-light"
+  :class=`{
     'is-dark-mobile': mobileOpen,
     '': !mobileOpen
-  }`>
+  }`
+>
   <div class="container">
     <!-- Brand -->
     <div class="navbar-brand">
@@ -13,11 +17,14 @@
       <!-- Responsive toggle -->
       <div class="navbar-burger" @click="openMobileMenu()">
         <div class="menu-toggle">
-          <span class="icon-box-toggle" :class=`{
+          <span
+            class="icon-box-toggle"
+            :class=`{
                 'active': mobileOpen,
                 '': !mobileOpen
-            }`>
-            <span class="rotate">
+            }`
+          >
+            <span class="rotate" style="padding-right: 10px; margin-top: 10px;margin-right:10px">
               <i class="icon-line-top"></i>
               <i class="icon-line-center"></i>
               <i class="icon-line-bottom"></i>
@@ -27,10 +34,14 @@
       </div>
     </div>
     <!-- Menu -->
-    <div id="navbarMenu" class="navbar-menu light-menu" :class=`{
+    <div
+      id="navbarMenu"
+      class="navbar-menu light-menu"
+      :class=`{
           'is-active': mobileOpen,
           '': !mobileOpen
-      }`>
+      }`
+    >
       <div class="navbar-end">
         <!-- Menu item -->
         <div class="navbar-item is-nav-link">
@@ -57,7 +68,10 @@
         </div>
         <!-- Sign up -->
         <div class="navbar-item">
-          <a href="#" class="button k-button k-primary raised has-gradient slanted">
+          <a
+            href="#"
+            class="button k-button k-primary raised has-gradient slanted"
+          >
             <span class="text">Register</span>
             <span class="front-gradient"></span>
           </a>
